@@ -1,0 +1,82 @@
+version: '3'
+services:
+    postgres:
+        image: postgres:13
+        env_file:
+            - .env
+        volumes:
+            - "./data/airflow_postgres:/var/lib/postgresql/data:rw"
+        healthcheck:
+            test: ["CMD", "pg_isready", "-U", "airflow"]
+            interval: 5s
+            retries: 5
+        restart: always
+
+    scheduler:
+        build: .
+        command: scheduler
+        restart: on-failure
+        depends_on:
+            - postgres
+        env_file:
+            - .env
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
+            - ./scripts:/opt/airflow/scripts
+            - ./air_data:/opt/airflow/air_data
+            - ~/.google/credentials/:/.google/credentials
+
+    webserver:
+        build: .
+        entrypoint: ./scripts/entrypoint.sh
+        restart: on-failure
+        depends_on:
+            - postgres
+            - scheduler
+        env_file:
+            - .env
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
+            - ~/.google/credentials/:/.google/credentials:ro
+            - ./scripts:/opt/airflow/scripts
+
+        ports:
+            - "8080:8080"
+        healthcheck:
+            test: [ "CMD-SHELL", "[ -f /home/airflow/airflow-webserver.pid ]" ]
+            interval: 30s
+            timeout: 30s
+            retries: 3
+
+    minio:
+        image: quay.io/minio/minio
+        container_name: minio-sprint
+        ports:
+            - "9000:9000"
+            - "9001:9001"
+        volumes:
+            - "./datalake:/data"
+        environment:
+            MINIO_ROOT_USER: tensorflow
+            MINIO_ROOT_PASSWORD: tensorflow
+            MINIO_ADDRESS: ':9000'
+            MINIO_CONSOLE_ADDRESS: ':9001'
+        command: minio server /data
+
+    mysql:
+        image: mysql:8.2.0
+        container_name: mysql-sprint
+        environment:
+            MYSQL_DATABASE: "${MYSQL_DATABASE}"
+            MYSQL_USER: "${MYSQL_USER}"
+            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+        ports:
+            - 3306:3306
+        volumes:
+            - ./data/mysql-db:/var/lib/mysql
+        restart: unless-stopped
