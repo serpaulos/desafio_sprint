@@ -1,4 +1,4 @@
-FROM apache/airflow:2.7.3
+FROM apache/airflow:2.8.0
 
 ENV AIRFLOW_HOME=/opt/airflow
 
@@ -6,21 +6,23 @@ USER root
 # Install core dependencies.
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-         vim \
          nano \
   && apt-get autoremove -yqq --purge \
   && apt-get clean
 
 USER airflow
 
-COPY requirements.txt .
+COPY --chown=airflow:root requirements.txt /opt/airflow
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Ref: https://airflow.apache.org/docs/docker-stack/recipes.html
+
+SHELL ["/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c"]
 USER 0
 
 ARG CLOUD_SDK_VERSION=322.0.0
-ENV GCLOUD_HOME=/opt/google-cloud-sdk
+ENV GCLOUD_HOME=/home/google-cloud-sdk
 
 ENV PATH="${GCLOUD_HOME}/bin/:${PATH}"
 
@@ -33,15 +35,13 @@ RUN DOWNLOAD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/goo
        --bash-completion=false \
        --path-update=false \
        --usage-reporting=false \
-       --additional-components alpha beta kubectl \
        --quiet \
     && rm -rf "${TMP_DIR}" \
-    && rm -rf "${GCLOUD_HOME}/.install/.backup/" \
     && gcloud --version
 
 WORKDIR $AIRFLOW_HOME
 
 COPY scripts scripts
-RUN chmod +x scripts/
+RUN chmod +x scripts
 
 USER $AIRFLOW_UID

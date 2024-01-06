@@ -1,17 +1,9 @@
 from datetime import datetime, timedelta
-from dotenv import load_dotenv
 from airflow import DAG
 import os
 from airflow.operators.python import PythonOperator
 from data_ingestion_callable import download, clean_task, convert_parquet
 from data_upload_callable import upload_bucket_bronze_s3, upload_bucket_silver_s3
-
-load_dotenv()
-
-# MYSQL_DATABASE = os.getenv('MYSQL_DATABASE')
-# MYSQL_USER = os.getenv('MYSQL_USER')
-# MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
-
 
 DEFAULT_ARGS = {
     'owner': 'PSergios',

@@ -1,9 +1,6 @@
-from dotenv import load_dotenv
 import requests
 import os
 import pandas as pd
-
-load_dotenv()
 
 bronze_bucket = 'bronze'
 folder_location = 'air_data'
@@ -50,6 +47,10 @@ def clean_task(ti):
     df = df.fillna(0)
     print(f"post: Missing passenger count {df.isna().sum()}")
 
+    # df['pickup_datetime'] = pd.to_datetime(df['pickup_datetime'], format='mixed').dt.tz_convert(None)
+    # df['dropoff_datetime'] = pd.to_datetime(df['dropoff_datetime'], format='mixed').dt.tz_convert(None)
+    #change this line in order to be accoring to the pattern
+    # df.at[498551, 'pickup_datetime'] = '2009-04-02 23:37:30.297216+00:00'
     df['pickup_datetime'] = pd.to_datetime(df['pickup_datetime'], format='mixed').dt.tz_convert(None)
     df['dropoff_datetime'] = pd.to_datetime(df['dropoff_datetime'], format='mixed').dt.tz_convert(None)
 

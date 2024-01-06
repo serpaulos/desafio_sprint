@@ -1,7 +1,5 @@
-from dotenv import load_dotenv
 from airflow.hooks.S3_hook import S3Hook
-
-load_dotenv()
+import boto3
 
 raw_bucket = 'bronze'
 cleaned_bucket = 'silver'
@@ -12,7 +10,7 @@ def upload_bucket_bronze_s3(ti):
     filename = ti.xcom_pull(task_ids="download_data")
     if not filename:
         raise ValueError("No value set on xcom store")
-    hook = S3Hook('my_s3_conn')
+    hook = S3Hook('my_conn')
     dest_folder = folder_location
     hook.load_file(
         filename=f"{dest_folder}/{filename}",
@@ -27,7 +25,7 @@ def upload_bucket_silver_s3(ti):
     filename = ti.xcom_pull(task_ids="convert_parquet")
     if not filename:
         raise ValueError("No value set on xcom store")
-    hook = S3Hook('my_s3_conn')
+    hook = S3Hook('my_conn')
     hook.load_file(
         filename=f"{filename}",
         key=f"{filename}",
