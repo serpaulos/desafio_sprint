@@ -14,7 +14,7 @@ from prefect_sqlalchemy import SqlAlchemyConnector
 data_folder = "data"
 
 
-@task(log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
+@task(name="download-data", log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
 def download_data(year):
     url = f"https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-{year}-json_corrigido.json"
 
@@ -40,19 +40,19 @@ def download_data(year):
                 print(f'Downloading... {file_size}/{total_size} bytes', end='\r')
 
 
-@task(log_prints=True, retries=3)
+@task(name="extract-data", log_prints=True, retries=3)
 def extract_data(year):
     path = Path(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.json')
     df = pd.read_json(path, lines=True)
 
-    df.to_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}.csv', index=False)
+    df.to_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.csv', index=False)
 
-    df_csv = pd.read_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}.csv')
+    df_csv = pd.read_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.csv')
 
     return df_csv
 
 
-@task(log_prints=True, retries=3)
+@task(name="transform-data", log_prints=True, retries=3)
 def transform_data(df_csv):
     print(f"pre: Missing passenger count {df_csv['passenger_count'].isin([0]).sum()}")
     df_csv = df_csv[df_csv['passenger_count'] != 0]
@@ -62,12 +62,10 @@ def transform_data(df_csv):
     df_csv = df_csv.fillna(0)
     print(f"post: Missing or null values count {df_csv.isna().sum()}")
 
-    df_csv.to_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-mod.csv', index=False)
-
     return df_csv
 
 
-@task(log_prints=True, retries=3)
+@task(name="write_local", log_prints=True, retries=3)
 def write_local(df: pd.DataFrame, dataset_file: str) -> Path:
     """Write DataFrame out locally as parquet file"""
     path = Path(f"{data_folder}/{dataset_file}.parquet")
@@ -75,7 +73,7 @@ def write_local(df: pd.DataFrame, dataset_file: str) -> Path:
     return path
 
 
-@task(log_prints=True, retries=3)
+@task(name="write-data-gcs", log_prints=True, retries=3)
 def write_gcs(path: Path) -> None:
     """Upload file to GCS"""
     gcs_block = GcsBucket.load("gcp-zoomcamp-airflow-zoomcamp")
@@ -83,11 +81,11 @@ def write_gcs(path: Path) -> None:
     return
 
 
-@task(log_prints=True, retries=3)
-def ingest_data(table_name, df_csv):
+@task(name="ingest-data", log_prints=True, retries=3)
+def ingest_data(table_name, year, df_csv):
     database_block = SqlAlchemyConnector.load("mysql-conn-sprint-ny-taxi")
     with database_block.get_connection(begin=False) as engine:
-        df_iter = pd.read_csv(f'data/data-sample_data-nyctaxi-trips-{year}.csv', iterator=True, chunksize=100000)
+        df_iter = pd.read_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.csv', iterator=True, chunksize=100000)
 
         while True:
 
@@ -112,19 +110,19 @@ def ingest_data(table_name, df_csv):
 
 @flow(name="Ingest flow")
 def main_flow(table_name: str, year: int):
-    dataset_file = f"{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido"
+    dataset_file = f"data-sample_data-nyctaxi-trips-{year}-json_corrigido"
 
     download_data(year)
     raw_data = extract_data(year)
-    data = transform_data(raw_data)
-    path = write_local(data, year, dataset_file)
+    dataf = transform_data(raw_data)
+    path = write_local(dataf, dataset_file)
     write_gcs(path)
-    ingest_data(table_name, data)
+    ingest_data(table_name, year, dataf)
 
 
 @flow(name="Parent flow")
 def etl_parent_flow(
-        table_name: str = "nyctaxi-trips", years: list[int] = [2009, 2010]
+        table_name: str = "nyctaxi-trips", years: list[int] = []
 ):
     for year in years:
         main_flow(table_name, year)
@@ -132,5 +130,5 @@ def etl_parent_flow(
 
 if __name__ == '__main__':
     table_name = "nyctaxi-trips"
-    year = [2009, 2010]
+    year = [2009]
     etl_parent_flow(table_name, year)
