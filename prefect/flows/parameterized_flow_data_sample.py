@@ -4,7 +4,6 @@ import os
 from datetime import timedelta
 from pathlib import Path
 from time import time
-
 import pandas as pd
 import requests
 from prefect import flow, task
@@ -15,8 +14,7 @@ from prefect_sqlalchemy import SqlAlchemyConnector
 data_folder = "data"
 
 
-@task(name="download-data", log_prints=True, retries=3, cache_key_fn=task_input_hash,
-      cache_expiration=timedelta(days=1))
+@task(name="download-data", log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
 def download_data(year):
     url = f"https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-{year}-json_corrigido.json"
 
@@ -87,8 +85,7 @@ def write_gcs(path: Path) -> None:
 def ingest_data(table_name, year, df_csv):
     database_block = SqlAlchemyConnector.load("mysql-conn-sprint-ny-taxi")
     with database_block.get_connection(begin=False) as engine:
-        df_iter = pd.read_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.csv', iterator=True,
-                              chunksize=100000)
+        df_iter = pd.read_csv(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.csv', iterator=True, chunksize=100000)
 
         while True:
 

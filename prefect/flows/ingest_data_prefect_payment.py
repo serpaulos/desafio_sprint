@@ -12,7 +12,8 @@ from prefect_sqlalchemy import SqlAlchemyConnector
 data_folder = "data"
 
 
-@task(log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
+# @task(log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(hours=2))
+@task(log_prints=True, retries=3)
 def download_payment():
     url = "https://s3.amazonaws.com/data-sprints-eng-test/data-payment_lookup-csv.csv"
 

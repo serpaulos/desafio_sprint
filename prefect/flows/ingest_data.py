@@ -79,11 +79,11 @@ def ingest_data(user, password, host, port, db, table_name, year):
 
 
 if __name__ == '__main__':
-    user = "sprint"
-    password = "sprint"
+    user = "sprint_prefect"
+    password = "sprint_prefect"
     host = "localhost"
     port = "3306"
-    db = "sprint_ny_taxi"
+    db = "sprint_ny_taxi_db"
     table_name = "nyctaxi-trips"
     year = 2009
 
