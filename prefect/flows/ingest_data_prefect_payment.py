@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
-from pathlib import Path
-
-import requests
 import os
-import argparse
 from datetime import timedelta
+from pathlib import Path
 import pandas as pd
-from sqlalchemy import create_engine
-import pymysql
+import requests
 from prefect import flow, task
 from prefect.tasks import task_input_hash
 from prefect_sqlalchemy import SqlAlchemyConnector
@@ -42,7 +38,7 @@ def download_payment():
                 print(f'Downloading... {file_size}/{total_size} bytes', end='\r')
 
 
-@task(log_prints=True, retries=3)
+@task(name="extract_payment_data", log_prints=True, retries=3)
 def extract_payment_data():
     path = Path(f'{data_folder}/data-payment_lookup-csv.csv')
 
@@ -51,7 +47,7 @@ def extract_payment_data():
     return df
 
 
-@task(log_prints=True, retries=3)
+@task(name="transform_data", log_prints=True, retries=3)
 def transform_data(df):
     # payment csv
 
@@ -97,7 +93,7 @@ def transform_data(df):
     return df
 
 
-@task(log_prints=True, retries=3)
+@task(name="ingest_data", log_prints=True, retries=3)
 def ingest_data(table_name, df):
     database_block = SqlAlchemyConnector.load("mysql-conn-sprint-ny-taxi")
     with database_block.get_connection(begin=False) as engine:

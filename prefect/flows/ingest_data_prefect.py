@@ -16,7 +16,7 @@ from prefect_sqlalchemy import SqlAlchemyConnector
 data_folder = "data"
 
 
-@task(log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
+@task(name="download_data", log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
 def download_data(year):
     url = f"https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-{year}-json_corrigido.json"
 
@@ -49,7 +49,7 @@ def download_data(year):
                 print(f'Downloading... {file_size}/{total_size} bytes', end='\r')
 
 
-@task(log_prints=True, retries=3)
+@task(name="extract_data", log_prints=True, retries=3)
 def extract_data(year):
     path = Path(f'{data_folder}/data-sample_data-nyctaxi-trips-{year}-json_corrigido.json')
     df = pd.read_json(path, lines=True)
@@ -66,7 +66,7 @@ def extract_data(year):
     return df_csv
 
 
-@task(log_prints=True, retries=3)
+@task(name="transform_data", log_prints=True, retries=3)
 def transform_data(df_csv):
     print(f"pre: Missing passenger count {df_csv['passenger_count'].isin([0]).sum()}")
     df_csv = df_csv[df_csv['passenger_count'] != 0]
@@ -79,7 +79,7 @@ def transform_data(df_csv):
     return df_csv
 
 
-@task(log_prints=True, retries=3)
+@task(name="ingest_data", log_prints=True, retries=3)
 def ingest_data(table_name, df_csv):
     database_block = SqlAlchemyConnector.load("mysql-conn-sprint-ny-taxi")
     with database_block.get_connection(begin=False) as engine:

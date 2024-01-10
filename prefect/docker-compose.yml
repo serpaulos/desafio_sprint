@@ -1,28 +1,13 @@
 version: '3'
 services:
-    minio:
-        image: quay.io/minio/minio
-        container_name: minio-prefect
-        ports:
-            - "9000:9000"
-            - "9001:9001"
-        volumes:
-            - "./datalake:/data"
-        environment:
-            MINIO_ROOT_USER: tensorflow
-            MINIO_ROOT_PASSWORD: tensorflow
-            MINIO_ADDRESS: ':9000'
-            MINIO_CONSOLE_ADDRESS: ':9001'
-        command: minio server /data
-
     mysql:
         image: mysql:8.2.0
         container_name: mysql-prefect
         environment:
-            MYSQL_DATABASE: "sprint_ny_taxi"
-            MYSQL_USER: "sprint"
-            MYSQL_ROOT_PASSWORD: "sprint_root"
-            MYSQL_PASSWORD: "sprint"
+            MYSQL_DATABASE: "${MYSQL_DATABASE}"
+            MYSQL_USER: "${MYSQL_USER}"
+            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
         ports:
             - 3306:3306
         volumes:
