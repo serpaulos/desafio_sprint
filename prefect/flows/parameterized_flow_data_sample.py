@@ -14,7 +14,8 @@ from prefect_sqlalchemy import SqlAlchemyConnector
 data_folder = "data"
 
 
-@task(name="download-data", log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
+@task(name="download-data", log_prints=True, retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(hours=1))
+#@task(name="download-data", log_prints=True, retries=3)
 def download_data(year):
     url = f"https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-{year}-json_corrigido.json"
 
@@ -97,6 +98,9 @@ def ingest_data(table_name, year, df_csv):
                 df_csv['pickup_datetime'] = pd.to_datetime(df_csv['pickup_datetime'], format='mixed')
                 df_csv['dropoff_datetime'] = pd.to_datetime(df_csv['dropoff_datetime'], format='mixed')
 
+                df_csv['pickup_datetime'] = pd.to_datetime(df_csv['pickup_datetime'], format='Y%m%d %H:%M:%S')
+                df_csv['dropoff_datetime'] = pd.to_datetime(df_csv['dropoff_datetime'], format='Y%m%d %H:%M:%S')
+
                 df_csv.to_sql(name=table_name, con=engine, if_exists='append')
 
                 t_end = time()
@@ -122,13 +126,13 @@ def main_flow(table_name: str, year: int):
 
 @flow(name="Parent flow")
 def etl_parent_flow(
-        table_name: str = "nyctaxi-trips", years: list[int] = []
+        table_name: str = "nyctaxi_trips", years: list[int] = []
 ):
     for year in years:
         main_flow(table_name, year)
 
 
 if __name__ == '__main__':
-    table_name = "nyctaxi-trips"
-    year = [2009]
+    table_name = "nyctaxi_trips"
+    year = [2011, 2012]
     etl_parent_flow(table_name, year)

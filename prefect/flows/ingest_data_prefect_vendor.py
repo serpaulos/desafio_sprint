@@ -64,4 +64,4 @@ def main_flow(table_name: str):
 
 
 if __name__ == '__main__':
-    main_flow("nyctaxi-vendors")
+    main_flow("nyctaxi_vendors")
