@@ -49,7 +49,7 @@ def clean_task(ti):
 
     # df['pickup_datetime'] = pd.to_datetime(df['pickup_datetime'], format='mixed').dt.tz_convert(None)
     # df['dropoff_datetime'] = pd.to_datetime(df['dropoff_datetime'], format='mixed').dt.tz_convert(None)
-    #change this line in order to be accoring to the pattern
+    # change this line in order to be accoring to the pattern
     # df.at[498551, 'pickup_datetime'] = '2009-04-02 23:37:30.297216+00:00'
     df['pickup_datetime'] = pd.to_datetime(df['pickup_datetime'], format='mixed').dt.tz_convert(None)
     df['dropoff_datetime'] = pd.to_datetime(df['dropoff_datetime'], format='mixed').dt.tz_convert(None)

@@ -23,7 +23,7 @@ with DAG(
         python_callable=download,
         do_xcom_push=True,
         op_kwargs=dict(
-            year=2009
+            year=2012
         ),
     )
     upload_task_bronze = PythonOperator(
