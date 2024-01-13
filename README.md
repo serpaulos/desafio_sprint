@@ -89,7 +89,7 @@ _ongoing_
   * Run was configure to accept parameters, you can put more then one year as a parm to the funcion and it will process it as list
 
 ## Improvements
-* Project still ongoing, since I am studying more about the Data Engineer rolse.
+* Project still ongoing, since I am studying more about the Data Engineer roles.
 * Need to study more about stream ETL for example.
 * Trere is an Airflow version at the repository, when its done I will complement the Radme file
 
