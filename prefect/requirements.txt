@@ -1,0 +1,7 @@
+pandas==2.1.4
+prefect==2.14.13
+prefect_gcp==0.5.5
+prefect_sqlalchemy==0.3.2
+PyMySQL==1.1.0
+Requests==2.31.0
+SQLAlchemy==1.4.51
