@@ -1,0 +1,3072 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca6c60984e6f4a1eb84ff5cc016e8d42 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ca6c60984e6f4a1eb84ff5cc016e8d42" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca6c60984e6f4a1eb84ff5cc016e8d42 = L.map(
+                "map_ca6c60984e6f4a1eb84ff5cc016e8d42",
+                {
+                    center: [39.12013104, -71.00902028],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea54ef80e6d261c0bf5a1cf9de765059 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_ea54ef80e6d261c0bf5a1cf9de765059.addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_3b5ab6fe682247837ebc1c856067af91 = L.marker(
+                [40.644826, -73.781742],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_6741d4ae39141da30319f1373eda56de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3b5ab6fe682247837ebc1c856067af91.setIcon(icon_6741d4ae39141da30319f1373eda56de);
+        
+    
+        var popup_da042165a17f23cfc7997695f47f1234 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f933dbca6071461cc5b66ae889994f6 = $(`<div id="html_9f933dbca6071461cc5b66ae889994f6" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_da042165a17f23cfc7997695f47f1234.setContent(html_9f933dbca6071461cc5b66ae889994f6);
+            
+        
+
+        marker_3b5ab6fe682247837ebc1c856067af91.bindPopup(popup_da042165a17f23cfc7997695f47f1234)
+        ;
+
+        
+    
+    
+            var marker_1932747093a383471794f03d6477f6a9 = L.marker(
+                [40.696441, -73.99254],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_f3b92b687d67beecd40a069b2dfd5ce6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1932747093a383471794f03d6477f6a9.setIcon(icon_f3b92b687d67beecd40a069b2dfd5ce6);
+        
+    
+        var popup_77504f079c314db4ed11e0d7bbaacb7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_299383eebb61840d50ff5d913180c1dd = $(`<div id="html_299383eebb61840d50ff5d913180c1dd" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_77504f079c314db4ed11e0d7bbaacb7c.setContent(html_299383eebb61840d50ff5d913180c1dd);
+            
+        
+
+        marker_1932747093a383471794f03d6477f6a9.bindPopup(popup_77504f079c314db4ed11e0d7bbaacb7c)
+        ;
+
+        
+    
+    
+            var poly_line_baf5c9e1139e55bfe69256b8cfb0916b = L.polyline(
+                [[40.644826, -73.781742], [40.696441, -73.99254]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_8901b97daf4034291c389230f02989dc = L.marker(
+                [40.715938, -73.989404],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_076747901f37fae11dda767b72159a7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8901b97daf4034291c389230f02989dc.setIcon(icon_076747901f37fae11dda767b72159a7c);
+        
+    
+        var popup_bf010ef60035f6ceef0ecdf2f8ddfa6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00bc43ab0b6cd7f6ab185de2b32d5c36 = $(`<div id="html_00bc43ab0b6cd7f6ab185de2b32d5c36" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_bf010ef60035f6ceef0ecdf2f8ddfa6e.setContent(html_00bc43ab0b6cd7f6ab185de2b32d5c36);
+            
+        
+
+        marker_8901b97daf4034291c389230f02989dc.bindPopup(popup_bf010ef60035f6ceef0ecdf2f8ddfa6e)
+        ;
+
+        
+    
+    
+            var marker_7ce15a6f5f2200f2114ba361611c4801 = L.marker(
+                [40.722557, -73.987248],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_229951623e91ec45b078914348c600d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7ce15a6f5f2200f2114ba361611c4801.setIcon(icon_229951623e91ec45b078914348c600d2);
+        
+    
+        var popup_4ec25587cb9bae0a495f07bb2e265ffd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_394cecc22b13def244dcf0e50c952e83 = $(`<div id="html_394cecc22b13def244dcf0e50c952e83" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_4ec25587cb9bae0a495f07bb2e265ffd.setContent(html_394cecc22b13def244dcf0e50c952e83);
+            
+        
+
+        marker_7ce15a6f5f2200f2114ba361611c4801.bindPopup(popup_4ec25587cb9bae0a495f07bb2e265ffd)
+        ;
+
+        
+    
+    
+            var poly_line_8870728ee5d0b040a77be6fd72301d97 = L.polyline(
+                [[40.715938, -73.989404], [40.722557, -73.987248]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_2cd30d4e5ebd890a14da20c5f4665687 = L.marker(
+                [40.641482, -73.78806],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_73000974788d800bb663d6e0a51173cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2cd30d4e5ebd890a14da20c5f4665687.setIcon(icon_73000974788d800bb663d6e0a51173cb);
+        
+    
+        var popup_b8ebe60470d25c52b57d3c0ffef2af39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3cfbdb8fe8534ddb2921309b5187ac4d = $(`<div id="html_3cfbdb8fe8534ddb2921309b5187ac4d" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_b8ebe60470d25c52b57d3c0ffef2af39.setContent(html_3cfbdb8fe8534ddb2921309b5187ac4d);
+            
+        
+
+        marker_2cd30d4e5ebd890a14da20c5f4665687.bindPopup(popup_b8ebe60470d25c52b57d3c0ffef2af39)
+        ;
+
+        
+    
+    
+            var marker_4737599515f7e497832d094dcad09e3b = L.marker(
+                [40.749432, -73.981148],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_23bb49d5dee4240a89acf3e127e7248d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4737599515f7e497832d094dcad09e3b.setIcon(icon_23bb49d5dee4240a89acf3e127e7248d);
+        
+    
+        var popup_8dbb80a0eecb924d4d8c6f4d765f3b05 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2ca399bf43c468e514885894e81cb5c = $(`<div id="html_d2ca399bf43c468e514885894e81cb5c" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_8dbb80a0eecb924d4d8c6f4d765f3b05.setContent(html_d2ca399bf43c468e514885894e81cb5c);
+            
+        
+
+        marker_4737599515f7e497832d094dcad09e3b.bindPopup(popup_8dbb80a0eecb924d4d8c6f4d765f3b05)
+        ;
+
+        
+    
+    
+            var poly_line_ff641bb513da75b4e066e319eb519312 = L.polyline(
+                [[40.641482, -73.78806], [40.749432, -73.981148]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_b539bab66cf95cbbd9a203a4ff5acb7d = L.marker(
+                [40.780348, -73.959496],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_4babaf1151df7a79f505d9c85fa9742e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b539bab66cf95cbbd9a203a4ff5acb7d.setIcon(icon_4babaf1151df7a79f505d9c85fa9742e);
+        
+    
+        var popup_ca6300f2d2d2ae9231292c6a89a94f04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_feb6feb0d5648920aab2d5872f258409 = $(`<div id="html_feb6feb0d5648920aab2d5872f258409" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_ca6300f2d2d2ae9231292c6a89a94f04.setContent(html_feb6feb0d5648920aab2d5872f258409);
+            
+        
+
+        marker_b539bab66cf95cbbd9a203a4ff5acb7d.bindPopup(popup_ca6300f2d2d2ae9231292c6a89a94f04)
+        ;
+
+        
+    
+    
+            var marker_cf9e496cd6ec5b455495a003b35e17e6 = L.marker(
+                [40.773277, -73.962493],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_de311428665f6924a97f42bb14268de1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cf9e496cd6ec5b455495a003b35e17e6.setIcon(icon_de311428665f6924a97f42bb14268de1);
+        
+    
+        var popup_b1a67af6401a33cade89e76a95c2e384 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d84e9007e93a62898712a0085bf7f3e2 = $(`<div id="html_d84e9007e93a62898712a0085bf7f3e2" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_b1a67af6401a33cade89e76a95c2e384.setContent(html_d84e9007e93a62898712a0085bf7f3e2);
+            
+        
+
+        marker_cf9e496cd6ec5b455495a003b35e17e6.bindPopup(popup_b1a67af6401a33cade89e76a95c2e384)
+        ;
+
+        
+    
+    
+            var poly_line_6f8212bc5d1d0eada662ca3a09f12f45 = L.polyline(
+                [[40.780348, -73.959496], [40.773277, -73.962493]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_d0d4f8640c2117adbfb5f358ea523c60 = L.marker(
+                [40.763985, -73.954067],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_78ba9c202d1510b2eea7b91f88e90515 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d0d4f8640c2117adbfb5f358ea523c60.setIcon(icon_78ba9c202d1510b2eea7b91f88e90515);
+        
+    
+        var popup_84db58e31383b46bd8e903c081d6f48d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9e6f4ebafa05ec9bb06f673aa0f97c1 = $(`<div id="html_f9e6f4ebafa05ec9bb06f673aa0f97c1" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_84db58e31383b46bd8e903c081d6f48d.setContent(html_f9e6f4ebafa05ec9bb06f673aa0f97c1);
+            
+        
+
+        marker_d0d4f8640c2117adbfb5f358ea523c60.bindPopup(popup_84db58e31383b46bd8e903c081d6f48d)
+        ;
+
+        
+    
+    
+            var marker_9468c657264d8048932e3973c2a66f21 = L.marker(
+                [40.774463, -73.977161],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_e9380a2d712532815d763aa71bfa7f99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9468c657264d8048932e3973c2a66f21.setIcon(icon_e9380a2d712532815d763aa71bfa7f99);
+        
+    
+        var popup_5b367eb5e9545aab5d07fc3b96156ad6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_811b933b2c8998e39dc5c685540ac9b3 = $(`<div id="html_811b933b2c8998e39dc5c685540ac9b3" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_5b367eb5e9545aab5d07fc3b96156ad6.setContent(html_811b933b2c8998e39dc5c685540ac9b3);
+            
+        
+
+        marker_9468c657264d8048932e3973c2a66f21.bindPopup(popup_5b367eb5e9545aab5d07fc3b96156ad6)
+        ;
+
+        
+    
+    
+            var poly_line_60dd4e54fc1869c62e6a417af25eeaea = L.polyline(
+                [[40.763985, -73.954067], [40.774463, -73.977161]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_5d7de3a928a53b33fa4476227053c8d5 = L.marker(
+                [40.743663, -73.979937],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_3274bdb297ea9f90a7c5afe73a914e41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5d7de3a928a53b33fa4476227053c8d5.setIcon(icon_3274bdb297ea9f90a7c5afe73a914e41);
+        
+    
+        var popup_679cb0a79887419bf22c10ed96bc115b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2350e065dc09979cb0af44bc4033f2a = $(`<div id="html_e2350e065dc09979cb0af44bc4033f2a" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_679cb0a79887419bf22c10ed96bc115b.setContent(html_e2350e065dc09979cb0af44bc4033f2a);
+            
+        
+
+        marker_5d7de3a928a53b33fa4476227053c8d5.bindPopup(popup_679cb0a79887419bf22c10ed96bc115b)
+        ;
+
+        
+    
+    
+            var marker_442e0bdc942040383c351fc01cf76305 = L.marker(
+                [40.754007, -73.992318],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_5194db0bfdce76dce1e27fca2b109683 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_442e0bdc942040383c351fc01cf76305.setIcon(icon_5194db0bfdce76dce1e27fca2b109683);
+        
+    
+        var popup_2394f80eb3c303a69aa424d50ecd48c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31b3faad6daf794dabd97e882acf6e37 = $(`<div id="html_31b3faad6daf794dabd97e882acf6e37" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_2394f80eb3c303a69aa424d50ecd48c3.setContent(html_31b3faad6daf794dabd97e882acf6e37);
+            
+        
+
+        marker_442e0bdc942040383c351fc01cf76305.bindPopup(popup_2394f80eb3c303a69aa424d50ecd48c3)
+        ;
+
+        
+    
+    
+            var poly_line_620b5619eeed33352fe11aa7242d0571 = L.polyline(
+                [[40.743663, -73.979937], [40.754007, -73.992318]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_133f6aeae1554710ee476167fad24100 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_7db2683fffedd55d1864eb2cd65aa15f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_133f6aeae1554710ee476167fad24100.setIcon(icon_7db2683fffedd55d1864eb2cd65aa15f);
+        
+    
+        var popup_f5491d50171ee46427f78c5b8d1059f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b061b7f83289afb62f97e137b5c45977 = $(`<div id="html_b061b7f83289afb62f97e137b5c45977" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_f5491d50171ee46427f78c5b8d1059f8.setContent(html_b061b7f83289afb62f97e137b5c45977);
+            
+        
+
+        marker_133f6aeae1554710ee476167fad24100.bindPopup(popup_f5491d50171ee46427f78c5b8d1059f8)
+        ;
+
+        
+    
+    
+            var marker_39661e01edde9a5fb1b5c2486de89681 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_e67cc0a73caadf36ce6149cd1a604c22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_39661e01edde9a5fb1b5c2486de89681.setIcon(icon_e67cc0a73caadf36ce6149cd1a604c22);
+        
+    
+        var popup_6611b8033ba81d3636f17b7ba919016e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d7cf5715995766173a568415abf3bcf = $(`<div id="html_8d7cf5715995766173a568415abf3bcf" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_6611b8033ba81d3636f17b7ba919016e.setContent(html_8d7cf5715995766173a568415abf3bcf);
+            
+        
+
+        marker_39661e01edde9a5fb1b5c2486de89681.bindPopup(popup_6611b8033ba81d3636f17b7ba919016e)
+        ;
+
+        
+    
+    
+            var poly_line_62e5608006c84f594b3999bbb028d14d = L.polyline(
+                [[0.0, 0.0], [0.0, 0.0]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_fef7ae439714f02dc95259cc432db0b2 = L.marker(
+                [40.751732, -73.9775],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_273894bda020bde9d58277c82bdbd3c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fef7ae439714f02dc95259cc432db0b2.setIcon(icon_273894bda020bde9d58277c82bdbd3c7);
+        
+    
+        var popup_d5a8a35c4592a60a14200511a8fc4c3f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e417d97e52d767c0e6934acd7a66fe77 = $(`<div id="html_e417d97e52d767c0e6934acd7a66fe77" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_d5a8a35c4592a60a14200511a8fc4c3f.setContent(html_e417d97e52d767c0e6934acd7a66fe77);
+            
+        
+
+        marker_fef7ae439714f02dc95259cc432db0b2.bindPopup(popup_d5a8a35c4592a60a14200511a8fc4c3f)
+        ;
+
+        
+    
+    
+            var marker_9c07b66580c089f72569cb56d1864f0f = L.marker(
+                [40.70733, -74.004432],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_31f1504d0f82729445b5d8afce0ad631 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9c07b66580c089f72569cb56d1864f0f.setIcon(icon_31f1504d0f82729445b5d8afce0ad631);
+        
+    
+        var popup_8ebcae5a6e6f08c554880f66a1eb001a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78c9f2088d5e18369ad1a4f52268df4d = $(`<div id="html_78c9f2088d5e18369ad1a4f52268df4d" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_8ebcae5a6e6f08c554880f66a1eb001a.setContent(html_78c9f2088d5e18369ad1a4f52268df4d);
+            
+        
+
+        marker_9c07b66580c089f72569cb56d1864f0f.bindPopup(popup_8ebcae5a6e6f08c554880f66a1eb001a)
+        ;
+
+        
+    
+    
+            var poly_line_54f4f3699f3a1a8009600ccc1eb6ae2a = L.polyline(
+                [[40.751732, -73.9775], [40.70733, -74.004432]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_26af737c598436aa0b37ca7888353ab1 = L.marker(
+                [40.775808, -73.98286],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_7b320374f21a15c0f9be60ce226adff4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_26af737c598436aa0b37ca7888353ab1.setIcon(icon_7b320374f21a15c0f9be60ce226adff4);
+        
+    
+        var popup_d85b6cc410033f1abd377bb536c89835 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba42c9b4cb7ecf88eb87e6f747744c4f = $(`<div id="html_ba42c9b4cb7ecf88eb87e6f747744c4f" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_d85b6cc410033f1abd377bb536c89835.setContent(html_ba42c9b4cb7ecf88eb87e6f747744c4f);
+            
+        
+
+        marker_26af737c598436aa0b37ca7888353ab1.bindPopup(popup_d85b6cc410033f1abd377bb536c89835)
+        ;
+
+        
+    
+    
+            var marker_8cf8d5f80cf86f005786694e4614b86c = L.marker(
+                [40.759757, -73.980613],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_ea43c73fcc5db752fdd1f30ff17f67c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8cf8d5f80cf86f005786694e4614b86c.setIcon(icon_ea43c73fcc5db752fdd1f30ff17f67c4);
+        
+    
+        var popup_6f0f3dbfb04cf0930c2640d4617e69ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb3b7a2dd26b90a4232a860b94e49088 = $(`<div id="html_cb3b7a2dd26b90a4232a860b94e49088" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_6f0f3dbfb04cf0930c2640d4617e69ea.setContent(html_cb3b7a2dd26b90a4232a860b94e49088);
+            
+        
+
+        marker_8cf8d5f80cf86f005786694e4614b86c.bindPopup(popup_6f0f3dbfb04cf0930c2640d4617e69ea)
+        ;
+
+        
+    
+    
+            var poly_line_a8133657e7d88c048436121063301a24 = L.polyline(
+                [[40.775808, -73.98286], [40.759757, -73.980613]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_af732fed60419313aff556a387f8fadb = L.marker(
+                [40.780088, -73.955448],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_a4ec8f364b023f0e53e46a98f5454d84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_af732fed60419313aff556a387f8fadb.setIcon(icon_a4ec8f364b023f0e53e46a98f5454d84);
+        
+    
+        var popup_cda16d0613eb25265376614b0e101762 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40a2ac029bbef9aa07acc96da54f91de = $(`<div id="html_40a2ac029bbef9aa07acc96da54f91de" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_cda16d0613eb25265376614b0e101762.setContent(html_40a2ac029bbef9aa07acc96da54f91de);
+            
+        
+
+        marker_af732fed60419313aff556a387f8fadb.bindPopup(popup_cda16d0613eb25265376614b0e101762)
+        ;
+
+        
+    
+    
+            var marker_92a82b1e4473ded61e5595a60f617b4a = L.marker(
+                [40.770707, -73.963557],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_714621c89c49ef3850ae7bfe26e61c58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_92a82b1e4473ded61e5595a60f617b4a.setIcon(icon_714621c89c49ef3850ae7bfe26e61c58);
+        
+    
+        var popup_a1e7e19cd8d88cfddfd088be7e97a02f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20db1bbbd3e58ba889b6f84751c3c1ef = $(`<div id="html_20db1bbbd3e58ba889b6f84751c3c1ef" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_a1e7e19cd8d88cfddfd088be7e97a02f.setContent(html_20db1bbbd3e58ba889b6f84751c3c1ef);
+            
+        
+
+        marker_92a82b1e4473ded61e5595a60f617b4a.bindPopup(popup_a1e7e19cd8d88cfddfd088be7e97a02f)
+        ;
+
+        
+    
+    
+            var poly_line_fa9bd2397705add50b4017691f58997f = L.polyline(
+                [[40.780088, -73.955448], [40.770707, -73.963557]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_a79440b4772dd477da0882414d735f06 = L.marker(
+                [40.782083, -73.959453],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_7a76b29bd3cdc8ca609d911e67209848 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a79440b4772dd477da0882414d735f06.setIcon(icon_7a76b29bd3cdc8ca609d911e67209848);
+        
+    
+        var popup_73e70bc3a40a875b38b985961626c2bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af5d0eba9561a7e1f1f8f11013445921 = $(`<div id="html_af5d0eba9561a7e1f1f8f11013445921" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_73e70bc3a40a875b38b985961626c2bd.setContent(html_af5d0eba9561a7e1f1f8f11013445921);
+            
+        
+
+        marker_a79440b4772dd477da0882414d735f06.bindPopup(popup_73e70bc3a40a875b38b985961626c2bd)
+        ;
+
+        
+    
+    
+            var marker_f6cf297737a551e40fd678d2058e880f = L.marker(
+                [40.768952, -73.981138],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_23036acb23446428e1c512266f3d43ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f6cf297737a551e40fd678d2058e880f.setIcon(icon_23036acb23446428e1c512266f3d43ab);
+        
+    
+        var popup_62cbf11a1502d60908c0f5ea4b686509 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52e021ef36667a9835c40b368be20e2b = $(`<div id="html_52e021ef36667a9835c40b368be20e2b" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_62cbf11a1502d60908c0f5ea4b686509.setContent(html_52e021ef36667a9835c40b368be20e2b);
+            
+        
+
+        marker_f6cf297737a551e40fd678d2058e880f.bindPopup(popup_62cbf11a1502d60908c0f5ea4b686509)
+        ;
+
+        
+    
+    
+            var poly_line_718baa0cb38e6339e4eecb4e6b21bb5b = L.polyline(
+                [[40.782083, -73.959453], [40.768952, -73.981138]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_3057595da912524d37da45006ab3a1a6 = L.marker(
+                [40.7533, -73.970753],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_6fc6cdae58f848ed407f57fe7cf263ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3057595da912524d37da45006ab3a1a6.setIcon(icon_6fc6cdae58f848ed407f57fe7cf263ba);
+        
+    
+        var popup_93b23dd17887770f5ef9263f34afb303 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ec397644be403a0b3782b85a728d214 = $(`<div id="html_5ec397644be403a0b3782b85a728d214" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_93b23dd17887770f5ef9263f34afb303.setContent(html_5ec397644be403a0b3782b85a728d214);
+            
+        
+
+        marker_3057595da912524d37da45006ab3a1a6.bindPopup(popup_93b23dd17887770f5ef9263f34afb303)
+        ;
+
+        
+    
+    
+            var marker_f05000c1df0b055ef3870799f66e0f95 = L.marker(
+                [40.752703, -73.97439],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_c0421b1b2f177678076b6f9ea678f933 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f05000c1df0b055ef3870799f66e0f95.setIcon(icon_c0421b1b2f177678076b6f9ea678f933);
+        
+    
+        var popup_0c7734831a2bf3be6f875ff250513588 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1663078c5dd599a00d158564422b9aa = $(`<div id="html_c1663078c5dd599a00d158564422b9aa" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_0c7734831a2bf3be6f875ff250513588.setContent(html_c1663078c5dd599a00d158564422b9aa);
+            
+        
+
+        marker_f05000c1df0b055ef3870799f66e0f95.bindPopup(popup_0c7734831a2bf3be6f875ff250513588)
+        ;
+
+        
+    
+    
+            var poly_line_4a4cef097e1f61e9d1e1c0cad6e267c9 = L.polyline(
+                [[40.7533, -73.970753], [40.752703, -73.97439]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_558f5ac82299ad396115597c30527be6 = L.marker(
+                [40.746253, -73.994023],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_15fd9332a9a20816316b66070a1647ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_558f5ac82299ad396115597c30527be6.setIcon(icon_15fd9332a9a20816316b66070a1647ce);
+        
+    
+        var popup_b2777ac0f0a63d3e39e15697c892c253 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e61f7504de06a1b6c7f17f5bffec412e = $(`<div id="html_e61f7504de06a1b6c7f17f5bffec412e" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_b2777ac0f0a63d3e39e15697c892c253.setContent(html_e61f7504de06a1b6c7f17f5bffec412e);
+            
+        
+
+        marker_558f5ac82299ad396115597c30527be6.bindPopup(popup_b2777ac0f0a63d3e39e15697c892c253)
+        ;
+
+        
+    
+    
+            var marker_804c893582f4b6c84f369bd44122534c = L.marker(
+                [40.73253, -73.990067],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_b05c1c2ab1abc40808b7b12abede9f11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_804c893582f4b6c84f369bd44122534c.setIcon(icon_b05c1c2ab1abc40808b7b12abede9f11);
+        
+    
+        var popup_e8c2c777f777a2107583a1b4af63d616 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d2ac1a0663fe3ede40f3f68715b8338 = $(`<div id="html_4d2ac1a0663fe3ede40f3f68715b8338" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_e8c2c777f777a2107583a1b4af63d616.setContent(html_4d2ac1a0663fe3ede40f3f68715b8338);
+            
+        
+
+        marker_804c893582f4b6c84f369bd44122534c.bindPopup(popup_e8c2c777f777a2107583a1b4af63d616)
+        ;
+
+        
+    
+    
+            var poly_line_6b46c05ff8796a52bf86d541ec78fdeb = L.polyline(
+                [[40.746253, -73.994023], [40.73253, -73.990067]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_63f146745291eba0311f909c5940b6ad = L.marker(
+                [40.76236, -73.984503],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_65b81af31ee40f94df68cb323da49020 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_63f146745291eba0311f909c5940b6ad.setIcon(icon_65b81af31ee40f94df68cb323da49020);
+        
+    
+        var popup_17e3a516e5d529461207c71ccb78bd6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc02ea848e91f09516968a2306675506 = $(`<div id="html_fc02ea848e91f09516968a2306675506" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_17e3a516e5d529461207c71ccb78bd6e.setContent(html_fc02ea848e91f09516968a2306675506);
+            
+        
+
+        marker_63f146745291eba0311f909c5940b6ad.bindPopup(popup_17e3a516e5d529461207c71ccb78bd6e)
+        ;
+
+        
+    
+    
+            var marker_0dbdcf4e37130503a1ec62f4b39859e3 = L.marker(
+                [40.75706, -73.974188],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_ea7a9c5e2b918e3153d51a3d0d916271 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0dbdcf4e37130503a1ec62f4b39859e3.setIcon(icon_ea7a9c5e2b918e3153d51a3d0d916271);
+        
+    
+        var popup_aecab63f39407f979e78ccb36e03de1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8223967eb2be21c598b7089a11defab = $(`<div id="html_c8223967eb2be21c598b7089a11defab" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_aecab63f39407f979e78ccb36e03de1f.setContent(html_c8223967eb2be21c598b7089a11defab);
+            
+        
+
+        marker_0dbdcf4e37130503a1ec62f4b39859e3.bindPopup(popup_aecab63f39407f979e78ccb36e03de1f)
+        ;
+
+        
+    
+    
+            var poly_line_d2e06879617bd02d0704dfe776cd53df = L.polyline(
+                [[40.76236, -73.984503], [40.75706, -73.974188]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_30e8580ad8d9bbfd4966d5f97aafad50 = L.marker(
+                [40.75235, -73.978468],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_bea524eb6da47c57f27f532d5fbce9be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_30e8580ad8d9bbfd4966d5f97aafad50.setIcon(icon_bea524eb6da47c57f27f532d5fbce9be);
+        
+    
+        var popup_2f296059a0f20ce08d979aae4df80c0d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_061a5321a5b45ee22aa4006a79d81e94 = $(`<div id="html_061a5321a5b45ee22aa4006a79d81e94" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_2f296059a0f20ce08d979aae4df80c0d.setContent(html_061a5321a5b45ee22aa4006a79d81e94);
+            
+        
+
+        marker_30e8580ad8d9bbfd4966d5f97aafad50.bindPopup(popup_2f296059a0f20ce08d979aae4df80c0d)
+        ;
+
+        
+    
+    
+            var marker_a5989df8159a10220d3a4c354914a314 = L.marker(
+                [40.755697, -73.983283],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_180da753dc623079c07802b4c8aa9fce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a5989df8159a10220d3a4c354914a314.setIcon(icon_180da753dc623079c07802b4c8aa9fce);
+        
+    
+        var popup_ee6156e38d182162e985d8c48a6af839 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5bde8c1465c6274c612ae691ec813fa2 = $(`<div id="html_5bde8c1465c6274c612ae691ec813fa2" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_ee6156e38d182162e985d8c48a6af839.setContent(html_5bde8c1465c6274c612ae691ec813fa2);
+            
+        
+
+        marker_a5989df8159a10220d3a4c354914a314.bindPopup(popup_ee6156e38d182162e985d8c48a6af839)
+        ;
+
+        
+    
+    
+            var poly_line_c96f20b0b2c680de5a1f324217929d34 = L.polyline(
+                [[40.75235, -73.978468], [40.755697, -73.983283]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_1cd218d9c6897a1879edaae5b97a8694 = L.marker(
+                [40.78245, -73.982352],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_9fb38fe826378e6edbba5cfb228e11b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1cd218d9c6897a1879edaae5b97a8694.setIcon(icon_9fb38fe826378e6edbba5cfb228e11b1);
+        
+    
+        var popup_0439d48b40374722aa7f7c57fee0ad13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f10e34ce736727527c0725c1b3f42142 = $(`<div id="html_f10e34ce736727527c0725c1b3f42142" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_0439d48b40374722aa7f7c57fee0ad13.setContent(html_f10e34ce736727527c0725c1b3f42142);
+            
+        
+
+        marker_1cd218d9c6897a1879edaae5b97a8694.bindPopup(popup_0439d48b40374722aa7f7c57fee0ad13)
+        ;
+
+        
+    
+    
+            var marker_c4e9c0dcbd917815f301c0cd2e6a2a1a = L.marker(
+                [40.798508, -73.972998],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_03c83037ba8d03f9c83943427b83bc86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c4e9c0dcbd917815f301c0cd2e6a2a1a.setIcon(icon_03c83037ba8d03f9c83943427b83bc86);
+        
+    
+        var popup_36b5e88f43b24e036f8fa735980d16b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fcfa1ca66591d3caf52e52b1cf5cf20 = $(`<div id="html_8fcfa1ca66591d3caf52e52b1cf5cf20" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_36b5e88f43b24e036f8fa735980d16b6.setContent(html_8fcfa1ca66591d3caf52e52b1cf5cf20);
+            
+        
+
+        marker_c4e9c0dcbd917815f301c0cd2e6a2a1a.bindPopup(popup_36b5e88f43b24e036f8fa735980d16b6)
+        ;
+
+        
+    
+    
+            var poly_line_21201e16d16cdd8176e3ac16fbfd678a = L.polyline(
+                [[40.78245, -73.982352], [40.798508, -73.972998]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_5c7addc77e975c881a9a8e5057dcf2e5 = L.marker(
+                [40.715343, -74.007915],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_17d0e9ba9fe02fc5a72d7f56a40e3fec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5c7addc77e975c881a9a8e5057dcf2e5.setIcon(icon_17d0e9ba9fe02fc5a72d7f56a40e3fec);
+        
+    
+        var popup_cc00a4b27cbf9b7d6dff0e140bf428fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25d110249ef2b285a1770b978bf678e9 = $(`<div id="html_25d110249ef2b285a1770b978bf678e9" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_cc00a4b27cbf9b7d6dff0e140bf428fd.setContent(html_25d110249ef2b285a1770b978bf678e9);
+            
+        
+
+        marker_5c7addc77e975c881a9a8e5057dcf2e5.bindPopup(popup_cc00a4b27cbf9b7d6dff0e140bf428fd)
+        ;
+
+        
+    
+    
+            var marker_2099d827d8115c56c3ef90a9c6c51b95 = L.marker(
+                [40.755185, -73.974518],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_b6d8bb10c25d3f8d06ca9e2a11f0d953 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2099d827d8115c56c3ef90a9c6c51b95.setIcon(icon_b6d8bb10c25d3f8d06ca9e2a11f0d953);
+        
+    
+        var popup_49f687d94e9e5d4044df57d5ed97888f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5164de4ca872d32a99d69967f8ddd19 = $(`<div id="html_c5164de4ca872d32a99d69967f8ddd19" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_49f687d94e9e5d4044df57d5ed97888f.setContent(html_c5164de4ca872d32a99d69967f8ddd19);
+            
+        
+
+        marker_2099d827d8115c56c3ef90a9c6c51b95.bindPopup(popup_49f687d94e9e5d4044df57d5ed97888f)
+        ;
+
+        
+    
+    
+            var poly_line_d02b6b0c8f6af2bc419951fc0113373e = L.polyline(
+                [[40.715343, -74.007915], [40.755185, -73.974518]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_f90223b8daed5e86c623ba2a28d39057 = L.marker(
+                [40.73459, -73.995947],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_863b6960833c4a6aa91d723633e47fa6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f90223b8daed5e86c623ba2a28d39057.setIcon(icon_863b6960833c4a6aa91d723633e47fa6);
+        
+    
+        var popup_16945bc7b2c727ad230a2b4d049c5038 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce2a2b9b35effe8897c9851a25ff7976 = $(`<div id="html_ce2a2b9b35effe8897c9851a25ff7976" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_16945bc7b2c727ad230a2b4d049c5038.setContent(html_ce2a2b9b35effe8897c9851a25ff7976);
+            
+        
+
+        marker_f90223b8daed5e86c623ba2a28d39057.bindPopup(popup_16945bc7b2c727ad230a2b4d049c5038)
+        ;
+
+        
+    
+    
+            var marker_22c2ea45121433d63c3d0cd66e7e159f = L.marker(
+                [40.741607, -74.000853],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_3b73b3835c6a40d2edd039dc135574cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_22c2ea45121433d63c3d0cd66e7e159f.setIcon(icon_3b73b3835c6a40d2edd039dc135574cc);
+        
+    
+        var popup_41717597413487582548ac68a3a574d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61217ae20c3f5a82b852e6388509ce4a = $(`<div id="html_61217ae20c3f5a82b852e6388509ce4a" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_41717597413487582548ac68a3a574d1.setContent(html_61217ae20c3f5a82b852e6388509ce4a);
+            
+        
+
+        marker_22c2ea45121433d63c3d0cd66e7e159f.bindPopup(popup_41717597413487582548ac68a3a574d1)
+        ;
+
+        
+    
+    
+            var poly_line_487100392ebb813423027bcbeba3d888 = L.polyline(
+                [[40.73459, -73.995947], [40.741607, -74.000853]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_100a7b986db6700a88190c6d36971527 = L.marker(
+                [40.734601, -73.980407],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_8efb66df55bc15ee55521a0a4c3e9b05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_100a7b986db6700a88190c6d36971527.setIcon(icon_8efb66df55bc15ee55521a0a4c3e9b05);
+        
+    
+        var popup_77f3df32abca97bea9c6829931e8a4d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20563cb54779c79dd13ebc9fa48d9570 = $(`<div id="html_20563cb54779c79dd13ebc9fa48d9570" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_77f3df32abca97bea9c6829931e8a4d7.setContent(html_20563cb54779c79dd13ebc9fa48d9570);
+            
+        
+
+        marker_100a7b986db6700a88190c6d36971527.bindPopup(popup_77f3df32abca97bea9c6829931e8a4d7)
+        ;
+
+        
+    
+    
+            var marker_f73af6afc6c2f44324d054344ff5d173 = L.marker(
+                [40.744012, -73.976016],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_3211855452e82ede3809c55d9f409ee4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f73af6afc6c2f44324d054344ff5d173.setIcon(icon_3211855452e82ede3809c55d9f409ee4);
+        
+    
+        var popup_1d679ac89e3b2a3bce5cacbc0891dfea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b82db52bed375c3389322318262c2de6 = $(`<div id="html_b82db52bed375c3389322318262c2de6" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_1d679ac89e3b2a3bce5cacbc0891dfea.setContent(html_b82db52bed375c3389322318262c2de6);
+            
+        
+
+        marker_f73af6afc6c2f44324d054344ff5d173.bindPopup(popup_1d679ac89e3b2a3bce5cacbc0891dfea)
+        ;
+
+        
+    
+    
+            var poly_line_7f986dc426efce202b5e75a8843ccf26 = L.polyline(
+                [[40.734601, -73.980407], [40.744012, -73.976016]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_4491178ee4d989580fe62d70c075e8ad = L.marker(
+                [40.762283, -73.974578],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_c68d13a00da912d84fa0fb5fd1689ec7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4491178ee4d989580fe62d70c075e8ad.setIcon(icon_c68d13a00da912d84fa0fb5fd1689ec7);
+        
+    
+        var popup_503cafd75432f20de4d8591f107be944 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10f469802e84ddf8ef5deb60f32e0d85 = $(`<div id="html_10f469802e84ddf8ef5deb60f32e0d85" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_503cafd75432f20de4d8591f107be944.setContent(html_10f469802e84ddf8ef5deb60f32e0d85);
+            
+        
+
+        marker_4491178ee4d989580fe62d70c075e8ad.bindPopup(popup_503cafd75432f20de4d8591f107be944)
+        ;
+
+        
+    
+    
+            var marker_5edf32c5a95e284c64146e8857678ccd = L.marker(
+                [40.750458, -73.988085],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_d7ae9980478f5c70462c834b650e55e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5edf32c5a95e284c64146e8857678ccd.setIcon(icon_d7ae9980478f5c70462c834b650e55e7);
+        
+    
+        var popup_6c237a7619586a8c1cc55f42531c82b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f003bd56f049091e0c220203d8c2a57 = $(`<div id="html_8f003bd56f049091e0c220203d8c2a57" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_6c237a7619586a8c1cc55f42531c82b5.setContent(html_8f003bd56f049091e0c220203d8c2a57);
+            
+        
+
+        marker_5edf32c5a95e284c64146e8857678ccd.bindPopup(popup_6c237a7619586a8c1cc55f42531c82b5)
+        ;
+
+        
+    
+    
+            var poly_line_3f94fc3adba409dcf364cb2383fa6c95 = L.polyline(
+                [[40.762283, -73.974578], [40.750458, -73.988085]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_0ccd9fb91aa3aea46cf808a85e25c2cb = L.marker(
+                [40.763228, -73.959327],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_d28917c6276629154b80c5f5f4c0067c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0ccd9fb91aa3aea46cf808a85e25c2cb.setIcon(icon_d28917c6276629154b80c5f5f4c0067c);
+        
+    
+        var popup_b200c650d61b080c3d1f90419393211c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a67d73851a4479eacf9a78e47c423020 = $(`<div id="html_a67d73851a4479eacf9a78e47c423020" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_b200c650d61b080c3d1f90419393211c.setContent(html_a67d73851a4479eacf9a78e47c423020);
+            
+        
+
+        marker_0ccd9fb91aa3aea46cf808a85e25c2cb.bindPopup(popup_b200c650d61b080c3d1f90419393211c)
+        ;
+
+        
+    
+    
+            var marker_2e32223c8f79969a896843bf11a64b2e = L.marker(
+                [40.723517, -74.002685],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_de1f85f409cfeb259475ceb06acc445b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2e32223c8f79969a896843bf11a64b2e.setIcon(icon_de1f85f409cfeb259475ceb06acc445b);
+        
+    
+        var popup_d5d90f1071079a7c6ca82f06cd41b73c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad0ee2128fb912a6ab1c84613421efc8 = $(`<div id="html_ad0ee2128fb912a6ab1c84613421efc8" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_d5d90f1071079a7c6ca82f06cd41b73c.setContent(html_ad0ee2128fb912a6ab1c84613421efc8);
+            
+        
+
+        marker_2e32223c8f79969a896843bf11a64b2e.bindPopup(popup_d5d90f1071079a7c6ca82f06cd41b73c)
+        ;
+
+        
+    
+    
+            var poly_line_985445c02a1e359e3e57011af5833197 = L.polyline(
+                [[40.763228, -73.959327], [40.723517, -74.002685]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_de444ede15037cb79251c7c0386a629c = L.marker(
+                [40.796212, -73.970666],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_3ca0ad3835a7e02fcaf2b46ecfdd1900 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_de444ede15037cb79251c7c0386a629c.setIcon(icon_3ca0ad3835a7e02fcaf2b46ecfdd1900);
+        
+    
+        var popup_74c6c9e3eb10ad48dfdddfdf8ddafbd6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff67247fa16207e86fb2db36e5c6814f = $(`<div id="html_ff67247fa16207e86fb2db36e5c6814f" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_74c6c9e3eb10ad48dfdddfdf8ddafbd6.setContent(html_ff67247fa16207e86fb2db36e5c6814f);
+            
+        
+
+        marker_de444ede15037cb79251c7c0386a629c.bindPopup(popup_74c6c9e3eb10ad48dfdddfdf8ddafbd6)
+        ;
+
+        
+    
+    
+            var marker_901164d1e912be617cd0d4934026672d = L.marker(
+                [40.632744, -74.026761],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_5e128630cc093e7a70426a9dedd5d66f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_901164d1e912be617cd0d4934026672d.setIcon(icon_5e128630cc093e7a70426a9dedd5d66f);
+        
+    
+        var popup_b4e2aa66e9f82dadcee74039d0474592 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24904a25a3bdb420a438de95dad1a92f = $(`<div id="html_24904a25a3bdb420a438de95dad1a92f" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_b4e2aa66e9f82dadcee74039d0474592.setContent(html_24904a25a3bdb420a438de95dad1a92f);
+            
+        
+
+        marker_901164d1e912be617cd0d4934026672d.bindPopup(popup_b4e2aa66e9f82dadcee74039d0474592)
+        ;
+
+        
+    
+    
+            var poly_line_60b3c0ae0d05fbcdd42f5a52e89ae19b = L.polyline(
+                [[40.796212, -73.970666], [40.632744, -74.026761]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_c3353b41bf5524ff47103c474657a0b1 = L.marker(
+                [40.730407, -73.986392],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_62f40c6317283b4e13eab489d36d7bdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c3353b41bf5524ff47103c474657a0b1.setIcon(icon_62f40c6317283b4e13eab489d36d7bdd);
+        
+    
+        var popup_8abd2410635971e1fe0fc6950c263383 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9878fc676fb3cdeac45e3fe9bf286a61 = $(`<div id="html_9878fc676fb3cdeac45e3fe9bf286a61" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_8abd2410635971e1fe0fc6950c263383.setContent(html_9878fc676fb3cdeac45e3fe9bf286a61);
+            
+        
+
+        marker_c3353b41bf5524ff47103c474657a0b1.bindPopup(popup_8abd2410635971e1fe0fc6950c263383)
+        ;
+
+        
+    
+    
+            var marker_8741f63fc62e6df72b4e070fecbf0e3a = L.marker(
+                [40.745082, -73.99795],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_97482a9dc623856d2e0c8ce5283f05b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8741f63fc62e6df72b4e070fecbf0e3a.setIcon(icon_97482a9dc623856d2e0c8ce5283f05b2);
+        
+    
+        var popup_ce9a4c60bc0b174bb8db2d3c1f8392f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb99e715c1a745d4188301a5f48dcf98 = $(`<div id="html_eb99e715c1a745d4188301a5f48dcf98" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_ce9a4c60bc0b174bb8db2d3c1f8392f5.setContent(html_eb99e715c1a745d4188301a5f48dcf98);
+            
+        
+
+        marker_8741f63fc62e6df72b4e070fecbf0e3a.bindPopup(popup_ce9a4c60bc0b174bb8db2d3c1f8392f5)
+        ;
+
+        
+    
+    
+            var poly_line_c0ab7b85feabf52beefd896abf6b97cd = L.polyline(
+                [[40.730407, -73.986392], [40.745082, -73.99795]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_9e09e0d23f7dea830b0d40eb559e3c5f = L.marker(
+                [40.777707, -73.98267],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_5b936ab0e13c4749f982aac7d3867e09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9e09e0d23f7dea830b0d40eb559e3c5f.setIcon(icon_5b936ab0e13c4749f982aac7d3867e09);
+        
+    
+        var popup_79345bfd4da357e7b3ff222a51cab063 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c0e8972a1dcc72a4161b5be0baf9932c = $(`<div id="html_c0e8972a1dcc72a4161b5be0baf9932c" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_79345bfd4da357e7b3ff222a51cab063.setContent(html_c0e8972a1dcc72a4161b5be0baf9932c);
+            
+        
+
+        marker_9e09e0d23f7dea830b0d40eb559e3c5f.bindPopup(popup_79345bfd4da357e7b3ff222a51cab063)
+        ;
+
+        
+    
+    
+            var marker_614ff79d89cd59eaae98186986079326 = L.marker(
+                [40.767018, -73.987679],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_a0d85234b7558d12f34edab1c2cbebf9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_614ff79d89cd59eaae98186986079326.setIcon(icon_a0d85234b7558d12f34edab1c2cbebf9);
+        
+    
+        var popup_481788359e3e77bbeb077da88a2d06a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07fc9a00e5af95782e37cee0a9fd582c = $(`<div id="html_07fc9a00e5af95782e37cee0a9fd582c" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_481788359e3e77bbeb077da88a2d06a2.setContent(html_07fc9a00e5af95782e37cee0a9fd582c);
+            
+        
+
+        marker_614ff79d89cd59eaae98186986079326.bindPopup(popup_481788359e3e77bbeb077da88a2d06a2)
+        ;
+
+        
+    
+    
+            var poly_line_c3dc1adbfe0bdcab5d0e2297277d1511 = L.polyline(
+                [[40.777707, -73.98267], [40.767018, -73.987679]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_1eeb419b95c3794b8adc8b59a759b0fc = L.marker(
+                [40.712088, -74.007697],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_c5ffc7997fa358ec7738ad94a2c8171c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1eeb419b95c3794b8adc8b59a759b0fc.setIcon(icon_c5ffc7997fa358ec7738ad94a2c8171c);
+        
+    
+        var popup_d925453534d4454f9253f27bec288fd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c39550386b475bd9032aaec8da4686a5 = $(`<div id="html_c39550386b475bd9032aaec8da4686a5" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_d925453534d4454f9253f27bec288fd5.setContent(html_c39550386b475bd9032aaec8da4686a5);
+            
+        
+
+        marker_1eeb419b95c3794b8adc8b59a759b0fc.bindPopup(popup_d925453534d4454f9253f27bec288fd5)
+        ;
+
+        
+    
+    
+            var marker_3aaf6df10b8f50ddaa3b14d6c491680d = L.marker(
+                [40.72158, -74.002012],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_20b107d6e6bc4af4a0324f4d5dead2be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3aaf6df10b8f50ddaa3b14d6c491680d.setIcon(icon_20b107d6e6bc4af4a0324f4d5dead2be);
+        
+    
+        var popup_831331776583750f636cf49373589ab8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ad47057c022245d7b93f2945bf9f873 = $(`<div id="html_9ad47057c022245d7b93f2945bf9f873" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_831331776583750f636cf49373589ab8.setContent(html_9ad47057c022245d7b93f2945bf9f873);
+            
+        
+
+        marker_3aaf6df10b8f50ddaa3b14d6c491680d.bindPopup(popup_831331776583750f636cf49373589ab8)
+        ;
+
+        
+    
+    
+            var poly_line_164cf6281bdff2cce767e576eaee81ef = L.polyline(
+                [[40.712088, -74.007697], [40.72158, -74.002012]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_abb5fa41e3a80741d62f3b9420537698 = L.marker(
+                [40.755475, -73.982493],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_d09a3a5b4232fb093902814ca5ef192e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_abb5fa41e3a80741d62f3b9420537698.setIcon(icon_d09a3a5b4232fb093902814ca5ef192e);
+        
+    
+        var popup_0369edfaab3f78653b474f36262a6175 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec0ae4001bba4c44a7f96b6452b6580a = $(`<div id="html_ec0ae4001bba4c44a7f96b6452b6580a" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_0369edfaab3f78653b474f36262a6175.setContent(html_ec0ae4001bba4c44a7f96b6452b6580a);
+            
+        
+
+        marker_abb5fa41e3a80741d62f3b9420537698.bindPopup(popup_0369edfaab3f78653b474f36262a6175)
+        ;
+
+        
+    
+    
+            var marker_eeeabc0349c3487fd0fddbe8b51a908b = L.marker(
+                [40.763738, -73.978128],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_aaa94ac3d646fff94f3539517704284b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_eeeabc0349c3487fd0fddbe8b51a908b.setIcon(icon_aaa94ac3d646fff94f3539517704284b);
+        
+    
+        var popup_a7926b60133cf1df4f592249b3521f0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac8a25c2266243fa130785de18af1b24 = $(`<div id="html_ac8a25c2266243fa130785de18af1b24" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_a7926b60133cf1df4f592249b3521f0b.setContent(html_ac8a25c2266243fa130785de18af1b24);
+            
+        
+
+        marker_eeeabc0349c3487fd0fddbe8b51a908b.bindPopup(popup_a7926b60133cf1df4f592249b3521f0b)
+        ;
+
+        
+    
+    
+            var poly_line_904d48e8976bf90d79734ba5cba230b0 = L.polyline(
+                [[40.755475, -73.982493], [40.763738, -73.978128]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_ff3602da6378fc5d688559508778e8d7 = L.marker(
+                [40.718557, -73.987746],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_dda9fc114f0a3ce78fc95d673307f490 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ff3602da6378fc5d688559508778e8d7.setIcon(icon_dda9fc114f0a3ce78fc95d673307f490);
+        
+    
+        var popup_a0f311c3e3d743ec898408bd1823cb2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88072e6f0d27a5f0e3a842713732ff56 = $(`<div id="html_88072e6f0d27a5f0e3a842713732ff56" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_a0f311c3e3d743ec898408bd1823cb2a.setContent(html_88072e6f0d27a5f0e3a842713732ff56);
+            
+        
+
+        marker_ff3602da6378fc5d688559508778e8d7.bindPopup(popup_a0f311c3e3d743ec898408bd1823cb2a)
+        ;
+
+        
+    
+    
+            var marker_4cd8722b3987f77b93f4135d5b81df4f = L.marker(
+                [40.706395, -74.002812],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_87b1a722854c3e7b6e245eba4d39e6bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4cd8722b3987f77b93f4135d5b81df4f.setIcon(icon_87b1a722854c3e7b6e245eba4d39e6bc);
+        
+    
+        var popup_14be5439da02d7233a21281f07a50d48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2a90cdb48012cf9cc7fac9d2d2256d2 = $(`<div id="html_e2a90cdb48012cf9cc7fac9d2d2256d2" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_14be5439da02d7233a21281f07a50d48.setContent(html_e2a90cdb48012cf9cc7fac9d2d2256d2);
+            
+        
+
+        marker_4cd8722b3987f77b93f4135d5b81df4f.bindPopup(popup_14be5439da02d7233a21281f07a50d48)
+        ;
+
+        
+    
+    
+            var poly_line_a9ef805255bd8f71c416101f16d53e89 = L.polyline(
+                [[40.718557, -73.987746], [40.706395, -74.002812]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_862568c9c21851b272315e1e8c64d259 = L.marker(
+                [40.748562, -73.988607],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_fc18ec570be2d417ff079b3e3e6d0abc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_862568c9c21851b272315e1e8c64d259.setIcon(icon_fc18ec570be2d417ff079b3e3e6d0abc);
+        
+    
+        var popup_ae6775d6733988970968b21334518e6c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6164c56848e4aa8811752197c2429c1a = $(`<div id="html_6164c56848e4aa8811752197c2429c1a" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_ae6775d6733988970968b21334518e6c.setContent(html_6164c56848e4aa8811752197c2429c1a);
+            
+        
+
+        marker_862568c9c21851b272315e1e8c64d259.bindPopup(popup_ae6775d6733988970968b21334518e6c)
+        ;
+
+        
+    
+    
+            var marker_8213d21fd1065e03e56c71507ff6c044 = L.marker(
+                [40.75535, -73.975337],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_a81204f1df7e636532446d7215dd9466 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8213d21fd1065e03e56c71507ff6c044.setIcon(icon_a81204f1df7e636532446d7215dd9466);
+        
+    
+        var popup_cd5158130b7ea255d66e7f3c5a232cb4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3854cf5d050697d2d3bad3a37cdd694 = $(`<div id="html_f3854cf5d050697d2d3bad3a37cdd694" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_cd5158130b7ea255d66e7f3c5a232cb4.setContent(html_f3854cf5d050697d2d3bad3a37cdd694);
+            
+        
+
+        marker_8213d21fd1065e03e56c71507ff6c044.bindPopup(popup_cd5158130b7ea255d66e7f3c5a232cb4)
+        ;
+
+        
+    
+    
+            var poly_line_a67a44137a4be78374a3cbc3dcb6081d = L.polyline(
+                [[40.748562, -73.988607], [40.75535, -73.975337]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_443732ed4e6832797cf9d48859925a3b = L.marker(
+                [40.753032, -73.974927],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_2210406fb0e27bcd22cc10175b82008e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_443732ed4e6832797cf9d48859925a3b.setIcon(icon_2210406fb0e27bcd22cc10175b82008e);
+        
+    
+        var popup_7b364fbe9e1e70c88c4b593c5dba089f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b99960a871d17fb58a52bf025e53bb2b = $(`<div id="html_b99960a871d17fb58a52bf025e53bb2b" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_7b364fbe9e1e70c88c4b593c5dba089f.setContent(html_b99960a871d17fb58a52bf025e53bb2b);
+            
+        
+
+        marker_443732ed4e6832797cf9d48859925a3b.bindPopup(popup_7b364fbe9e1e70c88c4b593c5dba089f)
+        ;
+
+        
+    
+    
+            var marker_e20cce15fd0a114061097fdc38822e28 = L.marker(
+                [40.77829, -73.957333],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_ab7b2907c7ece99ab284635aef512f61 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e20cce15fd0a114061097fdc38822e28.setIcon(icon_ab7b2907c7ece99ab284635aef512f61);
+        
+    
+        var popup_dc6b32bacac0668447b4686216459108 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08cf03b4c80d77e32f03ba7d293e8b17 = $(`<div id="html_08cf03b4c80d77e32f03ba7d293e8b17" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_dc6b32bacac0668447b4686216459108.setContent(html_08cf03b4c80d77e32f03ba7d293e8b17);
+            
+        
+
+        marker_e20cce15fd0a114061097fdc38822e28.bindPopup(popup_dc6b32bacac0668447b4686216459108)
+        ;
+
+        
+    
+    
+            var poly_line_fe69bb242bae405036373f81dfb2cdcf = L.polyline(
+                [[40.753032, -73.974927], [40.77829, -73.957333]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_ccda36c49c299b39e6f5f17c79c98f57 = L.marker(
+                [40.757434, -73.986343],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_72a65e963639d51a2f214bcd6c6ba6ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ccda36c49c299b39e6f5f17c79c98f57.setIcon(icon_72a65e963639d51a2f214bcd6c6ba6ee);
+        
+    
+        var popup_1e7052bf2852dd660367bb8635ec8be9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf28f86ce9dde8d5ddf661bce0b4f3f3 = $(`<div id="html_cf28f86ce9dde8d5ddf661bce0b4f3f3" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_1e7052bf2852dd660367bb8635ec8be9.setContent(html_cf28f86ce9dde8d5ddf661bce0b4f3f3);
+            
+        
+
+        marker_ccda36c49c299b39e6f5f17c79c98f57.bindPopup(popup_1e7052bf2852dd660367bb8635ec8be9)
+        ;
+
+        
+    
+    
+            var marker_5abb5f5ccfb2d5167becb2a9d3d653b3 = L.marker(
+                [40.704748, -74.016465],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_e4eb4cdb075c7fac5cff2d334dcd05bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5abb5f5ccfb2d5167becb2a9d3d653b3.setIcon(icon_e4eb4cdb075c7fac5cff2d334dcd05bb);
+        
+    
+        var popup_b50268b06cdcce2977599215478bc642 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_906eb3783ca46417f9ed44c54cc636ef = $(`<div id="html_906eb3783ca46417f9ed44c54cc636ef" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_b50268b06cdcce2977599215478bc642.setContent(html_906eb3783ca46417f9ed44c54cc636ef);
+            
+        
+
+        marker_5abb5f5ccfb2d5167becb2a9d3d653b3.bindPopup(popup_b50268b06cdcce2977599215478bc642)
+        ;
+
+        
+    
+    
+            var poly_line_2445dc96edecc717fce5aafad15bc88b = L.polyline(
+                [[40.757434, -73.986343], [40.704748, -74.016465]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_8e21307307169428bdd3fb9fb9bf4795 = L.marker(
+                [40.74989, -73.991619],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_46b4bc2ba44603ceb531314e99497df1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8e21307307169428bdd3fb9fb9bf4795.setIcon(icon_46b4bc2ba44603ceb531314e99497df1);
+        
+    
+        var popup_b2ee7dc5cea270aadbf4e7a66c2e3632 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1be0268ed3c160678157d069a26f3d5 = $(`<div id="html_e1be0268ed3c160678157d069a26f3d5" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_b2ee7dc5cea270aadbf4e7a66c2e3632.setContent(html_e1be0268ed3c160678157d069a26f3d5);
+            
+        
+
+        marker_8e21307307169428bdd3fb9fb9bf4795.bindPopup(popup_b2ee7dc5cea270aadbf4e7a66c2e3632)
+        ;
+
+        
+    
+    
+            var marker_1e2113379585141354837f4d4b3f9572 = L.marker(
+                [40.742975, -73.987012],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_660d065c7d0edbe7b10b54e8a5c791b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1e2113379585141354837f4d4b3f9572.setIcon(icon_660d065c7d0edbe7b10b54e8a5c791b2);
+        
+    
+        var popup_1991d9b78f5ec4dfe9166693888405c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2bb5ac617cfb3a21c5a7910326e19e11 = $(`<div id="html_2bb5ac617cfb3a21c5a7910326e19e11" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_1991d9b78f5ec4dfe9166693888405c5.setContent(html_2bb5ac617cfb3a21c5a7910326e19e11);
+            
+        
+
+        marker_1e2113379585141354837f4d4b3f9572.bindPopup(popup_1991d9b78f5ec4dfe9166693888405c5)
+        ;
+
+        
+    
+    
+            var poly_line_658916dabc9d2ad8e390719037197186 = L.polyline(
+                [[40.74989, -73.991619], [40.742975, -73.987012]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_1fcc242612edb42838c5d021a97a07e1 = L.marker(
+                [40.749783, -73.98148],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_5e27dce3cf0f1af8b1070972bc8d566a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1fcc242612edb42838c5d021a97a07e1.setIcon(icon_5e27dce3cf0f1af8b1070972bc8d566a);
+        
+    
+        var popup_cb48c367d240696a3164e06bca68283b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28c38015b93809f330bc6c3bc71c482d = $(`<div id="html_28c38015b93809f330bc6c3bc71c482d" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_cb48c367d240696a3164e06bca68283b.setContent(html_28c38015b93809f330bc6c3bc71c482d);
+            
+        
+
+        marker_1fcc242612edb42838c5d021a97a07e1.bindPopup(popup_cb48c367d240696a3164e06bca68283b)
+        ;
+
+        
+    
+    
+            var marker_98dba19cbc8d0288124570e465543db5 = L.marker(
+                [40.76846, -73.861835],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_48bcc6f755335f57a6f58652ff29b680 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_98dba19cbc8d0288124570e465543db5.setIcon(icon_48bcc6f755335f57a6f58652ff29b680);
+        
+    
+        var popup_608fed8a5d3c4ab7380a486a72893c04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd7677acd881dbce0b8f3af17e2d5894 = $(`<div id="html_dd7677acd881dbce0b8f3af17e2d5894" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_608fed8a5d3c4ab7380a486a72893c04.setContent(html_dd7677acd881dbce0b8f3af17e2d5894);
+            
+        
+
+        marker_98dba19cbc8d0288124570e465543db5.bindPopup(popup_608fed8a5d3c4ab7380a486a72893c04)
+        ;
+
+        
+    
+    
+            var poly_line_5921b7f3a115e30253937bbb8cfdbbb5 = L.polyline(
+                [[40.749783, -73.98148], [40.76846, -73.861835]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_12f24011cbf748d7e0c82f1a5deb0992 = L.marker(
+                [40.737015, -73.992862],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_3e2730b5d089373e47bca8e6e20051c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_12f24011cbf748d7e0c82f1a5deb0992.setIcon(icon_3e2730b5d089373e47bca8e6e20051c6);
+        
+    
+        var popup_61518a1615ae95b57fb9f6dd174fde48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9c6db9f86ee51dcedef183affb6167a = $(`<div id="html_f9c6db9f86ee51dcedef183affb6167a" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_61518a1615ae95b57fb9f6dd174fde48.setContent(html_f9c6db9f86ee51dcedef183affb6167a);
+            
+        
+
+        marker_12f24011cbf748d7e0c82f1a5deb0992.bindPopup(popup_61518a1615ae95b57fb9f6dd174fde48)
+        ;
+
+        
+    
+    
+            var marker_7243d7bf3fcd272c741a42dcf164c7b1 = L.marker(
+                [40.722377, -73.991583],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_30602c21f82c9719cc0bb251f083eb16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7243d7bf3fcd272c741a42dcf164c7b1.setIcon(icon_30602c21f82c9719cc0bb251f083eb16);
+        
+    
+        var popup_706685847883d6550b9db2984e0dd967 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbce896518e288d88a397a2d43682a85 = $(`<div id="html_bbce896518e288d88a397a2d43682a85" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_706685847883d6550b9db2984e0dd967.setContent(html_bbce896518e288d88a397a2d43682a85);
+            
+        
+
+        marker_7243d7bf3fcd272c741a42dcf164c7b1.bindPopup(popup_706685847883d6550b9db2984e0dd967)
+        ;
+
+        
+    
+    
+            var poly_line_765c370e25f939897735e67d4db57a2a = L.polyline(
+                [[40.737015, -73.992862], [40.722377, -73.991583]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_5fb4370fe83939ec313dcbe6f6f365e0 = L.marker(
+                [40.741732, -73.978128],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_3e0346b0791744e7593be313cb4eb8a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5fb4370fe83939ec313dcbe6f6f365e0.setIcon(icon_3e0346b0791744e7593be313cb4eb8a9);
+        
+    
+        var popup_eee55b186445e47fb68e26cbbb8b25f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74f97ccef4f182a4f089f9b634abc775 = $(`<div id="html_74f97ccef4f182a4f089f9b634abc775" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_eee55b186445e47fb68e26cbbb8b25f7.setContent(html_74f97ccef4f182a4f089f9b634abc775);
+            
+        
+
+        marker_5fb4370fe83939ec313dcbe6f6f365e0.bindPopup(popup_eee55b186445e47fb68e26cbbb8b25f7)
+        ;
+
+        
+    
+    
+            var marker_fa215138eab1484d8e8979be9054d69f = L.marker(
+                [40.728988, -73.985097],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_b9acca5cd8c8040f334805e4a2aea6f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fa215138eab1484d8e8979be9054d69f.setIcon(icon_b9acca5cd8c8040f334805e4a2aea6f8);
+        
+    
+        var popup_f61a59344e5d14bd012109068c2c42fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef899c8ef5001f3fb819b9a06fd9d12a = $(`<div id="html_ef899c8ef5001f3fb819b9a06fd9d12a" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_f61a59344e5d14bd012109068c2c42fc.setContent(html_ef899c8ef5001f3fb819b9a06fd9d12a);
+            
+        
+
+        marker_fa215138eab1484d8e8979be9054d69f.bindPopup(popup_f61a59344e5d14bd012109068c2c42fc)
+        ;
+
+        
+    
+    
+            var poly_line_671a11dccdf71d201d73b9249a068700 = L.polyline(
+                [[40.741732, -73.978128], [40.728988, -73.985097]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_6694647a4b365b973de1d03f886e8150 = L.marker(
+                [40.730743, -73.988917],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_1ae769de8c7d416b1a5794b7067125fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6694647a4b365b973de1d03f886e8150.setIcon(icon_1ae769de8c7d416b1a5794b7067125fc);
+        
+    
+        var popup_2174f1a0a327292d3650e529311b208f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff5aefb97e24d282804324973bdf587b = $(`<div id="html_ff5aefb97e24d282804324973bdf587b" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_2174f1a0a327292d3650e529311b208f.setContent(html_ff5aefb97e24d282804324973bdf587b);
+            
+        
+
+        marker_6694647a4b365b973de1d03f886e8150.bindPopup(popup_2174f1a0a327292d3650e529311b208f)
+        ;
+
+        
+    
+    
+            var marker_7e89a28f267c63e2a306ac61d8dc0edf = L.marker(
+                [40.738156, -73.990765],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_8118ef9536dbef6c5ddfc337c3d526bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7e89a28f267c63e2a306ac61d8dc0edf.setIcon(icon_8118ef9536dbef6c5ddfc337c3d526bd);
+        
+    
+        var popup_0022f79f72968f7ea9802da1ee496327 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1600ce9c7e9cb2f094ff9792bbbb62b = $(`<div id="html_d1600ce9c7e9cb2f094ff9792bbbb62b" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_0022f79f72968f7ea9802da1ee496327.setContent(html_d1600ce9c7e9cb2f094ff9792bbbb62b);
+            
+        
+
+        marker_7e89a28f267c63e2a306ac61d8dc0edf.bindPopup(popup_0022f79f72968f7ea9802da1ee496327)
+        ;
+
+        
+    
+    
+            var poly_line_b17d7de4d40503b292c5011ba79670f4 = L.polyline(
+                [[40.730743, -73.988917], [40.738156, -73.990765]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_9a1144edbab5176542e8f75f762ab572 = L.marker(
+                [40.753332, -73.970083],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_f82cf52a93a312089abba48d3481d930 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9a1144edbab5176542e8f75f762ab572.setIcon(icon_f82cf52a93a312089abba48d3481d930);
+        
+    
+        var popup_98a47571b947aa49d2064871db020af0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c2679f46ec0186ebacdd2117cef4812 = $(`<div id="html_0c2679f46ec0186ebacdd2117cef4812" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_98a47571b947aa49d2064871db020af0.setContent(html_0c2679f46ec0186ebacdd2117cef4812);
+            
+        
+
+        marker_9a1144edbab5176542e8f75f762ab572.bindPopup(popup_98a47571b947aa49d2064871db020af0)
+        ;
+
+        
+    
+    
+            var marker_93ed1f57d9b9c908fdc2a7bce50ef332 = L.marker(
+                [40.727312, -73.991563],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_630b6a00205cf1adcf1c97a94aeb8417 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_93ed1f57d9b9c908fdc2a7bce50ef332.setIcon(icon_630b6a00205cf1adcf1c97a94aeb8417);
+        
+    
+        var popup_67071bf813db5e26d1ae1fa91c41834f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74ad295070afe47a09e1b8a728bafb7f = $(`<div id="html_74ad295070afe47a09e1b8a728bafb7f" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_67071bf813db5e26d1ae1fa91c41834f.setContent(html_74ad295070afe47a09e1b8a728bafb7f);
+            
+        
+
+        marker_93ed1f57d9b9c908fdc2a7bce50ef332.bindPopup(popup_67071bf813db5e26d1ae1fa91c41834f)
+        ;
+
+        
+    
+    
+            var poly_line_7238fb461f0e686f1b8c6b1ea90b94e7 = L.polyline(
+                [[40.753332, -73.970083], [40.727312, -73.991563]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_43f36814db3800864b62df72f7b0c9c4 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_5e440ed08e87cd6c484f49bd5ce68a6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_43f36814db3800864b62df72f7b0c9c4.setIcon(icon_5e440ed08e87cd6c484f49bd5ce68a6e);
+        
+    
+        var popup_ab98544c270e8fee95db5801f60ae8d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd2230c71db190a42f6aab120f28e4ac = $(`<div id="html_fd2230c71db190a42f6aab120f28e4ac" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_ab98544c270e8fee95db5801f60ae8d7.setContent(html_fd2230c71db190a42f6aab120f28e4ac);
+            
+        
+
+        marker_43f36814db3800864b62df72f7b0c9c4.bindPopup(popup_ab98544c270e8fee95db5801f60ae8d7)
+        ;
+
+        
+    
+    
+            var marker_8803a316565a045b4ce18f096ba30a94 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_688968ccd9a885af87a15a88f1a6efaa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8803a316565a045b4ce18f096ba30a94.setIcon(icon_688968ccd9a885af87a15a88f1a6efaa);
+        
+    
+        var popup_da7d788e5fb6e8c33586a3c6066da818 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05c800e9b4c40f0a1f2d3c8d7d02106f = $(`<div id="html_05c800e9b4c40f0a1f2d3c8d7d02106f" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_da7d788e5fb6e8c33586a3c6066da818.setContent(html_05c800e9b4c40f0a1f2d3c8d7d02106f);
+            
+        
+
+        marker_8803a316565a045b4ce18f096ba30a94.bindPopup(popup_da7d788e5fb6e8c33586a3c6066da818)
+        ;
+
+        
+    
+    
+            var poly_line_55945deb49045f566dafcbcc4e1d43ae = L.polyline(
+                [[0.0, 0.0], [0.0, 0.0]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_6ebfc2c23d06e346743f232dbada5cf8 = L.marker(
+                [40.745326, -73.994906],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_4e380003cb6146d10e7986f2dc5ba311 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6ebfc2c23d06e346743f232dbada5cf8.setIcon(icon_4e380003cb6146d10e7986f2dc5ba311);
+        
+    
+        var popup_e907a4dc2fdc1170b2216aa26119276e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f84efb527c58f99bba67c788c9c20e28 = $(`<div id="html_f84efb527c58f99bba67c788c9c20e28" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_e907a4dc2fdc1170b2216aa26119276e.setContent(html_f84efb527c58f99bba67c788c9c20e28);
+            
+        
+
+        marker_6ebfc2c23d06e346743f232dbada5cf8.bindPopup(popup_e907a4dc2fdc1170b2216aa26119276e)
+        ;
+
+        
+    
+    
+            var marker_2c5b50a1fa55a8ec3b72f7850adb1183 = L.marker(
+                [40.757179, -73.971331],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_ff02ea063395ad26e22327ec42232185 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2c5b50a1fa55a8ec3b72f7850adb1183.setIcon(icon_ff02ea063395ad26e22327ec42232185);
+        
+    
+        var popup_2284c4c60e35e9d6585d17bb4f500b89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_665e6078a45ffd9acb6825f1ea28926b = $(`<div id="html_665e6078a45ffd9acb6825f1ea28926b" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_2284c4c60e35e9d6585d17bb4f500b89.setContent(html_665e6078a45ffd9acb6825f1ea28926b);
+            
+        
+
+        marker_2c5b50a1fa55a8ec3b72f7850adb1183.bindPopup(popup_2284c4c60e35e9d6585d17bb4f500b89)
+        ;
+
+        
+    
+    
+            var poly_line_ca388fc04efac278305584d010477a26 = L.polyline(
+                [[40.745326, -73.994906], [40.757179, -73.971331]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_3afdc2ac001819f9a62598b761e90d3b = L.marker(
+                [40.750033, -73.994073],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_338468df622e8187a3ece13dd04e8ff4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3afdc2ac001819f9a62598b761e90d3b.setIcon(icon_338468df622e8187a3ece13dd04e8ff4);
+        
+    
+        var popup_b8c548df65c0f29aeaded14ed92b14a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d35c21416c0149c24cc6a36a08b1e73 = $(`<div id="html_7d35c21416c0149c24cc6a36a08b1e73" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_b8c548df65c0f29aeaded14ed92b14a4.setContent(html_7d35c21416c0149c24cc6a36a08b1e73);
+            
+        
+
+        marker_3afdc2ac001819f9a62598b761e90d3b.bindPopup(popup_b8c548df65c0f29aeaded14ed92b14a4)
+        ;
+
+        
+    
+    
+            var marker_b0da2b8282d22d3ebd3848ca0d8f3041 = L.marker(
+                [40.75496, -73.971712],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_c3a7a75b0d97c6cc1bd90721893864d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b0da2b8282d22d3ebd3848ca0d8f3041.setIcon(icon_c3a7a75b0d97c6cc1bd90721893864d1);
+        
+    
+        var popup_30e5680397f51daaefbf239646926e75 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e156652ff20ae094ed0b6b65adc5ed22 = $(`<div id="html_e156652ff20ae094ed0b6b65adc5ed22" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_30e5680397f51daaefbf239646926e75.setContent(html_e156652ff20ae094ed0b6b65adc5ed22);
+            
+        
+
+        marker_b0da2b8282d22d3ebd3848ca0d8f3041.bindPopup(popup_30e5680397f51daaefbf239646926e75)
+        ;
+
+        
+    
+    
+            var poly_line_c0b24cc5380c11779c80fd8d2d885a24 = L.polyline(
+                [[40.750033, -73.994073], [40.75496, -73.971712]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_bf1b5802c9b41064d7a729c8783f924a = L.marker(
+                [40.789565, -73.97719],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_c4dfe5f4a42fd75bf5e1ebe0b3a1c70d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bf1b5802c9b41064d7a729c8783f924a.setIcon(icon_c4dfe5f4a42fd75bf5e1ebe0b3a1c70d);
+        
+    
+        var popup_db2a182cbc164e99c0fed53460afe53a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f462b602444ce6c8541cc03c4404014 = $(`<div id="html_5f462b602444ce6c8541cc03c4404014" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_db2a182cbc164e99c0fed53460afe53a.setContent(html_5f462b602444ce6c8541cc03c4404014);
+            
+        
+
+        marker_bf1b5802c9b41064d7a729c8783f924a.bindPopup(popup_db2a182cbc164e99c0fed53460afe53a)
+        ;
+
+        
+    
+    
+            var marker_869c13d00c7c69658d8436316bd2a89b = L.marker(
+                [40.788767, -73.971653],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_8ce23ae59bc6b687ca06b798200ee06b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_869c13d00c7c69658d8436316bd2a89b.setIcon(icon_8ce23ae59bc6b687ca06b798200ee06b);
+        
+    
+        var popup_bd442583cd3ee5dc6788ac10940a4296 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c8d57c18baf069968e4f9e43e632049 = $(`<div id="html_0c8d57c18baf069968e4f9e43e632049" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_bd442583cd3ee5dc6788ac10940a4296.setContent(html_0c8d57c18baf069968e4f9e43e632049);
+            
+        
+
+        marker_869c13d00c7c69658d8436316bd2a89b.bindPopup(popup_bd442583cd3ee5dc6788ac10940a4296)
+        ;
+
+        
+    
+    
+            var poly_line_c8302e7d9edf4279fac018c407f004da = L.polyline(
+                [[40.789565, -73.97719], [40.788767, -73.971653]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_8bb3761d4566c3c8f8d70ad639137a5e = L.marker(
+                [40.769087, -73.862851],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_36fb4a59df00402a33aca4ec4e0c4362 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8bb3761d4566c3c8f8d70ad639137a5e.setIcon(icon_36fb4a59df00402a33aca4ec4e0c4362);
+        
+    
+        var popup_c667c3bfe431ebf920ab6d26a9c19dec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc373c928016c098e922abe8806bc4b6 = $(`<div id="html_dc373c928016c098e922abe8806bc4b6" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_c667c3bfe431ebf920ab6d26a9c19dec.setContent(html_dc373c928016c098e922abe8806bc4b6);
+            
+        
+
+        marker_8bb3761d4566c3c8f8d70ad639137a5e.bindPopup(popup_c667c3bfe431ebf920ab6d26a9c19dec)
+        ;
+
+        
+    
+    
+            var marker_85db7fd55928794eb79311b4947c897e = L.marker(
+                [40.769763, -73.918519],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_b5d5ac52124ef4c6f31fa6ab9deaae97 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_85db7fd55928794eb79311b4947c897e.setIcon(icon_b5d5ac52124ef4c6f31fa6ab9deaae97);
+        
+    
+        var popup_542b407b6fae30fcfb1505896758631d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18dd554ee2386ebd158cabbdc4636452 = $(`<div id="html_18dd554ee2386ebd158cabbdc4636452" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_542b407b6fae30fcfb1505896758631d.setContent(html_18dd554ee2386ebd158cabbdc4636452);
+            
+        
+
+        marker_85db7fd55928794eb79311b4947c897e.bindPopup(popup_542b407b6fae30fcfb1505896758631d)
+        ;
+
+        
+    
+    
+            var poly_line_3fdc1fd0058eb35a13fb0aa3abc3cc3f = L.polyline(
+                [[40.769087, -73.862851], [40.769763, -73.918519]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_c4a811ab3e0347c8c22485da84bf2172 = L.marker(
+                [40.862057, -73.903402],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_e81741740922a1622e848849da3d3451 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c4a811ab3e0347c8c22485da84bf2172.setIcon(icon_e81741740922a1622e848849da3d3451);
+        
+    
+        var popup_a51e2b7bb84e124d1955e17ea7b7634a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dffee39524c624efe0e2b8e246ca688f = $(`<div id="html_dffee39524c624efe0e2b8e246ca688f" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_a51e2b7bb84e124d1955e17ea7b7634a.setContent(html_dffee39524c624efe0e2b8e246ca688f);
+            
+        
+
+        marker_c4a811ab3e0347c8c22485da84bf2172.bindPopup(popup_a51e2b7bb84e124d1955e17ea7b7634a)
+        ;
+
+        
+    
+    
+            var marker_09fa83441204adcdf2ff74e75fb61de9 = L.marker(
+                [40.78693, -73.945735],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_40111e8080a642333e0ea8663300c811 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_09fa83441204adcdf2ff74e75fb61de9.setIcon(icon_40111e8080a642333e0ea8663300c811);
+        
+    
+        var popup_f446eb89a6cb54da20d3beb0e26ad76b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9994dcc4e30162f029d82501b4090628 = $(`<div id="html_9994dcc4e30162f029d82501b4090628" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_f446eb89a6cb54da20d3beb0e26ad76b.setContent(html_9994dcc4e30162f029d82501b4090628);
+            
+        
+
+        marker_09fa83441204adcdf2ff74e75fb61de9.bindPopup(popup_f446eb89a6cb54da20d3beb0e26ad76b)
+        ;
+
+        
+    
+    
+            var poly_line_6d6f670a088a1388174848cb99db9899 = L.polyline(
+                [[40.862057, -73.903402], [40.78693, -73.945735]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_64b97ea0a91a09a107cf692ccb541a66 = L.marker(
+                [40.770585, -73.953951],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_274327976179711a90d122df206c2c52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_64b97ea0a91a09a107cf692ccb541a66.setIcon(icon_274327976179711a90d122df206c2c52);
+        
+    
+        var popup_9ecfd918077739582f4f3aec42a46a9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3bc352427032efb0f982ad0bd7810ef = $(`<div id="html_b3bc352427032efb0f982ad0bd7810ef" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_9ecfd918077739582f4f3aec42a46a9b.setContent(html_b3bc352427032efb0f982ad0bd7810ef);
+            
+        
+
+        marker_64b97ea0a91a09a107cf692ccb541a66.bindPopup(popup_9ecfd918077739582f4f3aec42a46a9b)
+        ;
+
+        
+    
+    
+            var marker_ec994b8728a19cfc817109b98ab55061 = L.marker(
+                [40.718021, -73.993568],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_94182c5de40eee3f56adea86dc59cbd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ec994b8728a19cfc817109b98ab55061.setIcon(icon_94182c5de40eee3f56adea86dc59cbd6);
+        
+    
+        var popup_0c4aba00c1ff07598f048f947a510027 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1de968e224c3e6986a0e1bb9805925a6 = $(`<div id="html_1de968e224c3e6986a0e1bb9805925a6" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_0c4aba00c1ff07598f048f947a510027.setContent(html_1de968e224c3e6986a0e1bb9805925a6);
+            
+        
+
+        marker_ec994b8728a19cfc817109b98ab55061.bindPopup(popup_0c4aba00c1ff07598f048f947a510027)
+        ;
+
+        
+    
+    
+            var poly_line_8b9faa92edde442f634d8916b9275c80 = L.polyline(
+                [[40.770585, -73.953951], [40.718021, -73.993568]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_90fbf964515998128aa95cb450c04147 = L.marker(
+                [40.753531, -73.943012],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_09670dfb0c987a6d81e761267358223a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_90fbf964515998128aa95cb450c04147.setIcon(icon_09670dfb0c987a6d81e761267358223a);
+        
+    
+        var popup_852c6ebf202490087399d80030d31f09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3eb57a47f1fa08a5cf9a2c781ff6280 = $(`<div id="html_a3eb57a47f1fa08a5cf9a2c781ff6280" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_852c6ebf202490087399d80030d31f09.setContent(html_a3eb57a47f1fa08a5cf9a2c781ff6280);
+            
+        
+
+        marker_90fbf964515998128aa95cb450c04147.bindPopup(popup_852c6ebf202490087399d80030d31f09)
+        ;
+
+        
+    
+    
+            var marker_eb1278bfb04a01355df5cdd2a6b506c2 = L.marker(
+                [40.753531, -73.943012],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_4212bcfe0c6fbd9972c163ee637934e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_eb1278bfb04a01355df5cdd2a6b506c2.setIcon(icon_4212bcfe0c6fbd9972c163ee637934e5);
+        
+    
+        var popup_00aba37bdd734c351c76d7fd1a6539ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f98a66f1b49ce7018e4bf14551e174d8 = $(`<div id="html_f98a66f1b49ce7018e4bf14551e174d8" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_00aba37bdd734c351c76d7fd1a6539ae.setContent(html_f98a66f1b49ce7018e4bf14551e174d8);
+            
+        
+
+        marker_eb1278bfb04a01355df5cdd2a6b506c2.bindPopup(popup_00aba37bdd734c351c76d7fd1a6539ae)
+        ;
+
+        
+    
+    
+            var poly_line_3b358072f42903ae8239eda45a061f7d = L.polyline(
+                [[40.753531, -73.943012], [40.753531, -73.943012]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_cf79c7901974b98d14d4615054bb5562 = L.marker(
+                [40.73695, -73.98443],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_83465b56dea85f619a752313d862110f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cf79c7901974b98d14d4615054bb5562.setIcon(icon_83465b56dea85f619a752313d862110f);
+        
+    
+        var popup_cb6b186d4a895f9eb699681d12fc17f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f647862b3c1317e6581ea33a1b22c18 = $(`<div id="html_9f647862b3c1317e6581ea33a1b22c18" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_cb6b186d4a895f9eb699681d12fc17f5.setContent(html_9f647862b3c1317e6581ea33a1b22c18);
+            
+        
+
+        marker_cf79c7901974b98d14d4615054bb5562.bindPopup(popup_cb6b186d4a895f9eb699681d12fc17f5)
+        ;
+
+        
+    
+    
+            var marker_114188f86a7e4acbd36387fb8ff77a3f = L.marker(
+                [40.759967, -73.97471],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_67286aeaf3c902defbc4a8aadfa516f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_114188f86a7e4acbd36387fb8ff77a3f.setIcon(icon_67286aeaf3c902defbc4a8aadfa516f1);
+        
+    
+        var popup_f594826c3a5c6fed539b67bcccb07ade = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2d14900166e9c5ee14ba5a54252e27d = $(`<div id="html_a2d14900166e9c5ee14ba5a54252e27d" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_f594826c3a5c6fed539b67bcccb07ade.setContent(html_a2d14900166e9c5ee14ba5a54252e27d);
+            
+        
+
+        marker_114188f86a7e4acbd36387fb8ff77a3f.bindPopup(popup_f594826c3a5c6fed539b67bcccb07ade)
+        ;
+
+        
+    
+    
+            var poly_line_187b103da5845ec2e515ed32d38b8193 = L.polyline(
+                [[40.73695, -73.98443], [40.759967, -73.97471]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_05037ef725724bc6df3b2186cefbdede = L.marker(
+                [40.713312, -74.009551],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_f18dec49526fd4fd34853d81f45ca2ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_05037ef725724bc6df3b2186cefbdede.setIcon(icon_f18dec49526fd4fd34853d81f45ca2ce);
+        
+    
+        var popup_d80c348dfeed18c05294413595578714 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57f6ace9c9221168a0e49059cf5f993f = $(`<div id="html_57f6ace9c9221168a0e49059cf5f993f" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_d80c348dfeed18c05294413595578714.setContent(html_57f6ace9c9221168a0e49059cf5f993f);
+            
+        
+
+        marker_05037ef725724bc6df3b2186cefbdede.bindPopup(popup_d80c348dfeed18c05294413595578714)
+        ;
+
+        
+    
+    
+            var marker_f371a62bfef746c090869c0dbf085961 = L.marker(
+                [40.725743, -74.004027],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_4e66330cc2394763c1afc5a1e6a31050 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f371a62bfef746c090869c0dbf085961.setIcon(icon_4e66330cc2394763c1afc5a1e6a31050);
+        
+    
+        var popup_b4df9a9f85d585d63a81e11a5b6700dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e96237b71d313bfb6493fd261cbef56 = $(`<div id="html_4e96237b71d313bfb6493fd261cbef56" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_b4df9a9f85d585d63a81e11a5b6700dc.setContent(html_4e96237b71d313bfb6493fd261cbef56);
+            
+        
+
+        marker_f371a62bfef746c090869c0dbf085961.bindPopup(popup_b4df9a9f85d585d63a81e11a5b6700dc)
+        ;
+
+        
+    
+    
+            var poly_line_51be7a4a7cc50fbb50368921ecdf2df0 = L.polyline(
+                [[40.713312, -74.009551], [40.725743, -74.004027]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_9b362a0a05b5369a87e771c4593c0ff0 = L.marker(
+                [40.729053, -73.990166],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_61ffff85c27ecd01beab562fb4099fc4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9b362a0a05b5369a87e771c4593c0ff0.setIcon(icon_61ffff85c27ecd01beab562fb4099fc4);
+        
+    
+        var popup_5f6cc89ff8dda8af918c04cb1ec1b63d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6ccaea99a787998b04753b36030ac40 = $(`<div id="html_b6ccaea99a787998b04753b36030ac40" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_5f6cc89ff8dda8af918c04cb1ec1b63d.setContent(html_b6ccaea99a787998b04753b36030ac40);
+            
+        
+
+        marker_9b362a0a05b5369a87e771c4593c0ff0.bindPopup(popup_5f6cc89ff8dda8af918c04cb1ec1b63d)
+        ;
+
+        
+    
+    
+            var marker_3d4ab666785aea26211de62ff8d8a9e8 = L.marker(
+                [40.75765, -73.966941],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_2c0eec410cf87b13c35d998f7f612138 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3d4ab666785aea26211de62ff8d8a9e8.setIcon(icon_2c0eec410cf87b13c35d998f7f612138);
+        
+    
+        var popup_b8b3b6e253809b5d056c4015b7851552 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e4ec901853e939b51a7f9ba3b193d33 = $(`<div id="html_6e4ec901853e939b51a7f9ba3b193d33" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_b8b3b6e253809b5d056c4015b7851552.setContent(html_6e4ec901853e939b51a7f9ba3b193d33);
+            
+        
+
+        marker_3d4ab666785aea26211de62ff8d8a9e8.bindPopup(popup_b8b3b6e253809b5d056c4015b7851552)
+        ;
+
+        
+    
+    
+            var poly_line_f9735319b77a02e833c4fa739f93d1a5 = L.polyline(
+                [[40.729053, -73.990166], [40.75765, -73.966941]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_c31f9c1e075993b7948c85d246706734 = L.marker(
+                [40.778907, -73.962337],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_85d53848211b5c7131fb0e835ca179b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c31f9c1e075993b7948c85d246706734.setIcon(icon_85d53848211b5c7131fb0e835ca179b5);
+        
+    
+        var popup_02bb416a5819574502a3a9a72f0453cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fc02dc2b9c289ed685d2f83d5e7dde0 = $(`<div id="html_3fc02dc2b9c289ed685d2f83d5e7dde0" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_02bb416a5819574502a3a9a72f0453cc.setContent(html_3fc02dc2b9c289ed685d2f83d5e7dde0);
+            
+        
+
+        marker_c31f9c1e075993b7948c85d246706734.bindPopup(popup_02bb416a5819574502a3a9a72f0453cc)
+        ;
+
+        
+    
+    
+            var marker_cb2009b4824784c5f05702fa586c2c95 = L.marker(
+                [40.766003, -73.985153],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_ab15176af4194665dd0ca49d38f7a175 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cb2009b4824784c5f05702fa586c2c95.setIcon(icon_ab15176af4194665dd0ca49d38f7a175);
+        
+    
+        var popup_a51fa503ad73ee487b2b90e4e6f833f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9fec0f99b378669044f589298a71a89c = $(`<div id="html_9fec0f99b378669044f589298a71a89c" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_a51fa503ad73ee487b2b90e4e6f833f6.setContent(html_9fec0f99b378669044f589298a71a89c);
+            
+        
+
+        marker_cb2009b4824784c5f05702fa586c2c95.bindPopup(popup_a51fa503ad73ee487b2b90e4e6f833f6)
+        ;
+
+        
+    
+    
+            var poly_line_e178b3f18a449768fd090b2ed44c051c = L.polyline(
+                [[40.778907, -73.962337], [40.766003, -73.985153]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_33b007fc489ba0a80320efa58aacf342 = L.marker(
+                [40.771248, -73.964697],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_65c3f03dd2bb7c8bef7cc3e1b43b5775 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_33b007fc489ba0a80320efa58aacf342.setIcon(icon_65c3f03dd2bb7c8bef7cc3e1b43b5775);
+        
+    
+        var popup_b932019f0510d0387bc132d524bf5a41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a9039a1b729aadd394c1a75afa10e0e = $(`<div id="html_8a9039a1b729aadd394c1a75afa10e0e" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_b932019f0510d0387bc132d524bf5a41.setContent(html_8a9039a1b729aadd394c1a75afa10e0e);
+            
+        
+
+        marker_33b007fc489ba0a80320efa58aacf342.bindPopup(popup_b932019f0510d0387bc132d524bf5a41)
+        ;
+
+        
+    
+    
+            var marker_751afc59ea2a7b0e18b62be6118c8956 = L.marker(
+                [40.744185, -73.995867],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_05d22440d66c369e0c0c65358a95db0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_751afc59ea2a7b0e18b62be6118c8956.setIcon(icon_05d22440d66c369e0c0c65358a95db0f);
+        
+    
+        var popup_729d3e79586a2e7c8bfd4b78b1a18465 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f32d8d27bc1e8a6d059e4c571630a6ae = $(`<div id="html_f32d8d27bc1e8a6d059e4c571630a6ae" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_729d3e79586a2e7c8bfd4b78b1a18465.setContent(html_f32d8d27bc1e8a6d059e4c571630a6ae);
+            
+        
+
+        marker_751afc59ea2a7b0e18b62be6118c8956.bindPopup(popup_729d3e79586a2e7c8bfd4b78b1a18465)
+        ;
+
+        
+    
+    
+            var poly_line_3b860a0d5d00de5e8bb517a1c62ca910 = L.polyline(
+                [[40.771248, -73.964697], [40.744185, -73.995867]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var marker_adc99740c6a4213d80710f31e91711cb = L.marker(
+                [40.738218, -73.983578],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_d6fa50b4307b3cb87d7c8e2a83f56ebd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_adc99740c6a4213d80710f31e91711cb.setIcon(icon_d6fa50b4307b3cb87d7c8e2a83f56ebd);
+        
+    
+        var popup_d066d913afb4499270cf9bb0d5519766 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1bb352faeaf1b684c2f38fa933e5442 = $(`<div id="html_f1bb352faeaf1b684c2f38fa933e5442" style="width: 100.0%; height: 100.0%;">Início da corrida</div>`)[0];
+                popup_d066d913afb4499270cf9bb0d5519766.setContent(html_f1bb352faeaf1b684c2f38fa933e5442);
+            
+        
+
+        marker_adc99740c6a4213d80710f31e91711cb.bindPopup(popup_d066d913afb4499270cf9bb0d5519766)
+        ;
+
+        
+    
+    
+            var marker_9383ea575b4b52491c96ee6eeef5b47e = L.marker(
+                [40.783985, -73.98132],
+                {}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+    
+            var icon_51493bca2714467d30cb96fd5111ebd8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9383ea575b4b52491c96ee6eeef5b47e.setIcon(icon_51493bca2714467d30cb96fd5111ebd8);
+        
+    
+        var popup_e1ca1a51aea3d24f970605081479b4d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_073e4efef69545b9aed69b6c8f55ca04 = $(`<div id="html_073e4efef69545b9aed69b6c8f55ca04" style="width: 100.0%; height: 100.0%;">Fim da corrida</div>`)[0];
+                popup_e1ca1a51aea3d24f970605081479b4d6.setContent(html_073e4efef69545b9aed69b6c8f55ca04);
+            
+        
+
+        marker_9383ea575b4b52491c96ee6eeef5b47e.bindPopup(popup_e1ca1a51aea3d24f970605081479b4d6)
+        ;
+
+        
+    
+    
+            var poly_line_461b22e53464daca4e3be5246703254c = L.polyline(
+                [[40.738218, -73.983578], [40.783985, -73.98132]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca6c60984e6f4a1eb84ff5cc016e8d42);
+        
+</script>
+</html>
