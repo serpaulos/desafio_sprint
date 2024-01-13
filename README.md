@@ -43,9 +43,9 @@ last 3 months of 2012.
 ## Technologies
 - Python
 - Pandas
-- Airflow
+- Prefect
 - Docker (Docker compose)
-- Minio(S3)
+- GCP Bucket
 - Mysql
 
 ## Libraries Used (present in the requirements.txt)
@@ -74,6 +74,9 @@ _ongoing_
     * Prefect
       * flows (folder were files to be used in the flow/ETL are stored
            * data (store data when downloaded on the ETL process)
+           * Prefect Blocks were used to configure the credentials to access the GCP
+           * GCP Credentials | GCS Bucket | SQLAlchemy Connector
+           * .env files were used to manage some credentials as well
       * Data_infra (data docker use to store Mysql data 
       * Exploration (Store notebooks used to prototype the ETL)
 
