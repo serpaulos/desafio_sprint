@@ -84,6 +84,13 @@ _ongoing_
   * answer_questions.ipynb - used to answer  the proposed questions
   * exploration_data_vendor.ipynb - used to prototype the ingestion of data
 
+- Files in Flow folder
+    * ingest_data - First version or prototype to ingest data to database
+    * ingest_data_prefect - ETL file with just one variable, not configured to accept more than one variable
+    * ingest_data_prefect_payment - ingest data to the database for payment table
+    * ingest_data_prefect_vendor - ingest data to the database for vendor table
+    * parameterized_flow_data_sample - Final file to process data with more than one variable
+
 - Prefect ETL sequence
   * download_data -> extract_data -> transform_data -> write_local -> write_gcs -> ingest_data
   * Run was configure to accept parameters, you can put more then one year as a parm to the funcion and it will process it as list
